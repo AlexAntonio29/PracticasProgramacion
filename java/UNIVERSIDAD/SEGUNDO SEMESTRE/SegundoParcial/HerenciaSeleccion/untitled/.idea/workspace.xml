@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="51c81e06-5b0a-421b-9d98-55dabf23df43" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../../../../Android_studio/Ejercicio5/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../Android_studio/Ejercicio5/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../Android_studio/Ejercicio5/app/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../Android_studio/Ejercicio5/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../Android_studio/Ejercicio5/app/src/androidTest/java/com/angel/ejercicio5/ExampleInstrumentedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../Android_studio/Ejercicio5/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../Android_studio/Ejercicio5/app/src/main/java/com/angel/ejercicio5/MainActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../Android_studio/Ejercicio5/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../Android_studio/Ejercicio5/app/src/main/res/drawable/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../Android_studio/Ejercicio5/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../Android_studio/Ejercicio5/app/src/main/res/mipmap-anydpi/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../Android_studio/Ejercicio5/app/src/main/res/mipmap-anydpi/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../Android_studio/Ejercicio5/app/src/main/res/mipmap-hdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../Android_studio/Ejercicio5/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../Android_studio/Ejercicio5/app/src/main/res/mipmap-mdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../Android_studio/Ejercicio5/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../Android_studio/Ejercicio5/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../Android_studio/Ejercicio5/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../Android_studio/Ejercicio5/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../Android_studio/Ejercicio5/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../Android_studio/Ejercicio5/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../Android_studio/Ejercicio5/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../Android_studio/Ejercicio5/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../Android_studio/Ejercicio5/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../Android_studio/Ejercicio5/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../Android_studio/Ejercicio5/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../Android_studio/Ejercicio5/app/src/main/res/xml/backup_rules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../Android_studio/Ejercicio5/app/src/main/res/xml/data_extraction_rules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../Android_studio/Ejercicio5/app/src/test/java/com/angel/ejercicio5/ExampleUnitTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../Android_studio/Ejercicio5/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../Android_studio/Ejercicio5/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../Android_studio/Ejercicio5/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../Android_studio/Ejercicio5/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../Android_studio/Ejercicio5/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../Android_studio/Ejercicio5/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../Android_studio/Ejercicio5/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Android Studio/Calculadora/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../Android Studio/Calculadora/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Android Studio/Calculadora/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../Android Studio/Calculadora/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../Probabilidad y estadistica/Quadratic_Linear_regression/Quadratic_Linear_regression/src/DataSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../Probabilidad y estadistica/Quadratic_Linear_regression/Quadratic_Linear_regression/src/DataSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../Probabilidad y estadistica/Quadratic_Linear_regression/Quadratic_Linear_regression/src/DiscreteMaths.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../Probabilidad y estadistica/Quadratic_Linear_regression/Quadratic_Linear_regression/src/DiscreteMaths.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../Probabilidad y estadistica/Quadratic_Linear_regression/Quadratic_Linear_regression/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../Probabilidad y estadistica/Quadratic_Linear_regression/Quadratic_Linear_regression/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PRIMER PARCIAL/biblioteca/out/production/biblioteca/TestBiblioteca.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../PRIMER PARCIAL/biblioteca/out/production/biblioteca/TestBiblioteca.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PRIMER PARCIAL/biblioteca/src/TestBiblioteca.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../PRIMER PARCIAL/biblioteca/src/TestBiblioteca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../practica1/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../practica1/.idea/misc.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2dEJZAAZgHqWFp8OePthZitLAYj" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "D:/Alex/Escritorio/Programacion/PRACTICAS-PROGRAMACION/java/UNIVERSIDAD/SEGUNDO SEMESTRE/SegundoParcial/HerenciaSeleccion/untitled/src/Main.java",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="51c81e06-5b0a-421b-9d98-55dabf23df43" name="Changes" comment="" />
+      <created>1709567363372</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709567363372</updated>
+      <workItem from="1709567364491" duration="61000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -1,0 +1,4 @@
+0,1,2,3,0.0,4.0,5.0,Alex,Antonio,Angel,1,10,2001,1,cajas,10.0,1200
+2,nachos,10.0
+3,papas,15.0
+1,Coca,40.0

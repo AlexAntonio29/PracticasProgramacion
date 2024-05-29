@@ -1,0 +1,3 @@
+0,15,5,2024,47.5,2.5,50.0,Alejandro,Perez,Antonio,15,10,2001,3,Cajas,5.0,1200
+2,Papas,30.0
+4,Galletas,20.0

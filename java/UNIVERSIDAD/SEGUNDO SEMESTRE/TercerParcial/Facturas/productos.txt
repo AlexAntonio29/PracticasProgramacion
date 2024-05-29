@@ -1,0 +1,4 @@
+1,Coca,40.0
+2,Papas,30.0
+3,Pepsi,20.0
+4,Galletas,20.0

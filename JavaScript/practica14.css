@@ -1,0 +1,59 @@
+
+
+
+head{
+
+    background: blue;
+    
+}
+body{
+
+    background: red;
+
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+
+main{
+
+    background: rgb(209, 61, 61);
+   float: left;
+   color: rgb(0, 255, 55);
+    width: calc(70% - 2px);
+    margin: 0px auto;
+    border: 1px solid black;
+    min-height: 500px;
+    
+}
+
+aside{
+    float: right;
+    width: 30%;
+    background: hsl(0, 89%, 32%);
+    min-height: 500px;
+    border-bottom :  1px solid rgb(0, 0, 0);
+    border-top :  1px solid rgb(0, 0, 0);
+ 
+    
+}
+
+
+nav ul li{
+
+   
+    list-style: none;
+    text-align:left;
+    float: left;
+    margin: 20px;
+}
+.clearfix{
+    clear: both;
+}
+footer{
+
+    background: rgb(112, 60, 255);
+    text-align: center;
+    float: none;
+    border:2px solid rgb(243, 119, 226); 
+}

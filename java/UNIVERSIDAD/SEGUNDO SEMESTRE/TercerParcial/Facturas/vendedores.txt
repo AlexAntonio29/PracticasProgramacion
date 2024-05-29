@@ -1,0 +1,3 @@
+Pedro,Antonio,Angel,21,9,2000,1,Cajas,10.0,1200
+Angel,Pacheco,Jimenez,12,12,2001,2,Cajas,5.0,1200
+Alejandro,Perez,Antonio,15,10,2001,3,Cajas,5.0,1200

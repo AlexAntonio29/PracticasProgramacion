@@ -1,0 +1,31 @@
+//Se pueden agregar comentarios
+@use 'anidacion';
+$CFondo: #fcff64;
+
+
+@mixin uso_P($fondo:red,$texto:white){
+
+    background: $fondo;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: $texto;
+    
+
+
+}
+
+body{
+    @include uso_P($fondo:red,$texto:green );
+}
+
+
+
+footer{
+    @include uso_P($fondo:yellow,$texto:rgb(255, 9, 9) );
+    width: 100%;
+    height: 200px;
+    text-align: center;
+
+    
+
+}
+

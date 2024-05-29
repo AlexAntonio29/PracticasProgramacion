@@ -1,0 +1,6 @@
+0,15,5,2024,142.5,7.5,150.0,Angel,Pacheco,Jimenez,12,12,2001,2,Cajas,5.0,1200
+1,Coca,40.0
+2,Papas,30.0
+3,Pepsi,20.0
+4,Galletas,20.0
+1,Coca,40.0

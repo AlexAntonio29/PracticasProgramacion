@@ -1,0 +1,82 @@
+body{
+  
+    background: rgb(206, 252, 137);
+    font-family: Arial, Helvetica, sans-serif;
+    
+   
+}
+#titulo{ background: rgb(229, 255, 0);
+        text-align: center;
+        border: 2px solid black;
+        color: black;
+    }
+#navegador{
+    background: rgb(87, 252, 87);
+
+    width: 100%;
+
+
+}
+
+.clearfix{
+    clear: both;
+}
+
+nav ul li{
+    float: left;
+    list-style: none;
+    margin: 10px;
+    background: rgb(30, 255, 0);
+}
+#contenido{
+   background: rgb(27, 153, 27);
+   float: left;
+    width: calc(70% - 2px);
+    margin: 0px auto;
+    border: 1px solid black;
+    min-height: 500px;
+    
+    
+}
+
+.article{
+    
+    color: white;
+   margin-bottom: 10px;
+ 
+    border-bottom: 1px solid white ;
+    
+}
+.article h2{
+    font-size: 30px;
+}
+
+header{
+    background: rgb(15, 78, 6);
+    text-align: center;
+    color: white;
+   min-height:50px ;
+    margin: auto;
+    padding: 0;
+    border: 0;
+  
+}
+
+
+
+aside{
+    float: right;
+    width: 30%;
+    background: rgb(245, 221, 3);
+    min-height: 500px;
+    border-bottom :  1px solid rgb(0, 0, 0);
+    border-top :  1px solid rgb(0, 0, 0);
+    
+}
+footer{
+    background: rgb(255, 241, 43);
+    text-align: center;
+    float: none;  
+    border:2px solid rebeccapurple; 
+   
+}
