@@ -23,7 +23,7 @@ function App() {
        <h2>Ejercicio 1</h2>
 
 
-       <Ejercicio1/>
+       <Ejercicio1/>  {/*va directamente al componente Ejercicio1.js*/};
       
       </header>
     </div>

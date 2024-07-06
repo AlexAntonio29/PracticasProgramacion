@@ -16,9 +16,11 @@ export const Ejercicio1_1Input = ({year, setYear}) => {
 
  <h3>Ingreso de año manual  </h3>
 
- <input  type="text" onChange={e => cambiarFecha(e, e.target.value)} placeholder='Introduce el año..'/>
+ <input  type="text" onChange={e => cambiarFecha(e, e.target.value)} placeholder='Introduc el año..'/>
 
 
+
+<h1>hola</h1>
 
     </div>
   )

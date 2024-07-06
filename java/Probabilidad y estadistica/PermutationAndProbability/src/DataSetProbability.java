@@ -1,6 +1,10 @@
 public class DataSetProbability {
 
-    int[][] x1={{7,3},{2,6}};
+    int[][] x1 =     {
+            {8, 3},
+            {3, 6},
+            {5, 4}};
+
     public DataSetProbability() {
     }
 

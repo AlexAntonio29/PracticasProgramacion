@@ -18,7 +18,10 @@ public class Marginal extends Probability{
         System.out.println("Probablidad Marginal en X");
         for (int i: marginal){
             p++;
-            System.out.print(p+") "+i+"/"+total+"\n");
+            float t= Float.parseFloat(String.valueOf(i));
+            float r=Float.parseFloat(String.valueOf(total));
+            float f=t/r;
+            System.out.print(p+")"+i+"/"+total+"= "+f+"\n");
         }
 
         return marginal;
@@ -42,7 +45,10 @@ public class Marginal extends Probability{
         System.out.println("Probabilidad Marginal en Y");
         for (int i: marginal){
             p++;
-            System.out.print(p+") "+i+"/"+total+"\n");
+            float t= Float.parseFloat(String.valueOf(i));
+            float r=Float.parseFloat(String.valueOf(total));
+            float f=t/r;
+            System.out.print(p+") "+i+"/"+total+"= "+f+"\n");
         }
 return marginal;
     }

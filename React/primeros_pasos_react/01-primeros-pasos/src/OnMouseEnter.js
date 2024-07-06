@@ -3,7 +3,9 @@ import React from 'react'
 
 const Action=(e,n)=>{
 
-    console.log(n);
+
+  console.log(n);
+   //alert(n);
 }
 
 

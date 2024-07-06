@@ -12,7 +12,10 @@ int[] joint = new int[n.length*n[0].length];
 
                 joint[p]=n[i][j];
                p++;
-               System.out.print(p+") "+n[i][j]+"/"+total+"\n");
+
+               float divisor= Float.parseFloat(String.valueOf(n[i][j]));
+               float dividendo= Float.parseFloat(String.valueOf(total));
+               System.out.println(p+") "+n[i][j]+"/"+total+"= "+divisor/dividendo);
            }
 
         }
