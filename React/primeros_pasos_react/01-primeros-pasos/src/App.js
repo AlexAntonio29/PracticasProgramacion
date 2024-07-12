@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 
-import Micomponente from './Micomponente';{/*Aqui se logran importar lo que son los componentes dentro de El index principal (App.js) 
-  por lo tanto es importante incorporarlos en esta Seccion*/}
+import Micomponente from './Micomponente';/*Aqui se logran importar lo que son los componentes dentro de El index principal (App.js) 
+  por lo tanto es importante incorporarlos en esta Seccion*/
 
   
 import SegComponente from './SegComponente';
@@ -11,7 +11,7 @@ import { EventoOnclick } from './EventoOnclick';
 import { EventoDoubleclick } from './EventoDoubleclick';
 import { OnMouseEnter } from './OnMouseEnter';
 {/*NOTA: Es muy imporante tener en cuenta que a la hora de incorporar lo que son los componentes debemos de tener en cuenta que 
-  los componentes deben de iniciar con alguna letra mayusculay por estetica es importante que no esten separados por ejemplos "MiComponente"
+  los componentes deben de iniciar con alguna letra mayuscula y por estetica es importante que no esten separados por ejemplos "MiComponente"
 
   Es para que pueda ser reconocidos por React.
   */}
@@ -58,20 +58,24 @@ let ficha_medica={
 <SegComponente/>
 
 <TercComponente 
+
 nombre="Alexis" 
 apellidos="Antonio"
 ficha={ficha_medica}/*Lo componentes igual que las funciones o metodos tienen la facilidad de poder enviar parametros dentro de esta
-para que pueda trabajar con el archivo posterior en este caso TercComponente*/
+para que pueda trabajar con el archivo posterior en este caso TercComponente
+
+tanto nombre como apellidos y ficha (que contiene otros 3 datos se mandan a TercComponente)
+*/
 />
 
 
 {/*Uso de Eventos */}
 
 <h2>EventoOnclick</h2>
-<EventoOnclick/>
-<h2>EventoDoubleClick</h2>
+<EventoOnclick/>{/*Accion cuanto clickeas una vez*/}
+<h2>EventoDoubleClick</h2>{/*Accion cuanto clickeas dos veces*/}
 <EventoDoubleclick/>
-<h2>EventoOnMouse</h2>
+<h2>EventoOnMouse</h2>{/*Accion cuanto pasas el cursor en el área*/}
 <OnMouseEnter/>
 
     
