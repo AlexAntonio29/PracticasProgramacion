@@ -8,9 +8,15 @@ import { CSSTransition } from 'react-transition-group';
 
 
 
-export const FormularioUsuario = () => {
+export const FormularioUsuario = (props) => {
+
+  const [message, setMesagge]=useState('');
 
 
+    let actionMessage=(e)=>{
+        props(message);
+
+    }
  
 
   return (
@@ -20,7 +26,7 @@ export const FormularioUsuario = () => {
 
 
 
-        <input placeholder='Introduzca su usuario...' className='input' type='text'/>
+        <input  onChange={(e)=>setMesagge(e.target.value)}   placeholder='Introduzca su usuario...' className='input' type='text'/>
        
        
           

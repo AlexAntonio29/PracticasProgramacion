@@ -26,11 +26,20 @@ function App() {
   const [isVisibleFinal, setIsVisibleFinal]= useState(false);
 
 
+  const[usuario,setUsuario]=useState('');
+
+
 
   let actionVisibilityUsuario=(e)=>{
+
+    if(usuario==''){
+      alert("No puedes dejar el apartado vacío")
+    }else{
+
     setIsVisibleUsuario(!isVisibleUsuario);
     setIsVisiblePersonales(true);
   }
+}
 
   let actionVisibilityPersonales=()=>{
     setIsVisiblePersonales(!isVisiblePersonales);
@@ -53,6 +62,14 @@ function App() {
     alert("Final");
   }
 
+
+
+  let functionReciveUser=(e)=>{
+
+setUsuario(e);
+
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -69,8 +86,8 @@ function App() {
         classNames="fade"
         unmountOnExit
       >
-
-        <FormularioUsuario/>
+        
+        <FormularioUsuario reciveUsuario={ functionReciveUser}/>
          
          </CSSTransition>
 <CSSTransition
