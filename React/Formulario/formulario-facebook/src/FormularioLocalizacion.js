@@ -13,7 +13,7 @@ export const FormularioLocalizacion = () => {
       ];
 
   return (
-    <div className='designFormulario'>
+    <div className='design_box'>
 
 <select placeholder='Estado' className='input' >
     <option value='' disabled>Estado</option>
@@ -32,7 +32,7 @@ export const FormularioLocalizacion = () => {
 <input placeholder='Numero Exterior' className='input' type='text'/>
 
 
-<button className='design_button'>Continuar</button>
+
 
 
 

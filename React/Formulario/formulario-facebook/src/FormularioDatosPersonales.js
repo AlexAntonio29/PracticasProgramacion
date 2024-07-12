@@ -4,7 +4,7 @@ export const FormularioDatosPersonales = () => {
   return (
 
    
-    <div className='designFormulario'>
+    <div className='design_box'>
 
 <input placeholder='Nombre(s)' className='input' type='text'/>
 <input placeholder='Apellido Paterno' className='input' type='text'/>
@@ -15,7 +15,7 @@ export const FormularioDatosPersonales = () => {
 
 
     
-    <button className='design_button'>Continuar</button>
+  
     </div>
   )
 }

@@ -1,18 +1,34 @@
-import React from 'react'
-import './Formulario.css';
 
-import { ButtonAction1 } from './ButtonAction1';
+
+import React, { useState } from 'react'
+import './Formulario.css';
+import { CSSTransition } from 'react-transition-group';
+
+
+
+
 
 export const FormularioUsuario = () => {
+
+
+ 
+
   return (
-    <div className='designFormulario'>
+   
+    <div className='design_box'>
+
+
 
 
         <input placeholder='Introduzca su usuario...' className='input' type='text'/>
-        < ButtonAction1/>         
        
+       
+          
+          
+        
 
     </div>
+   
 
     
   )
