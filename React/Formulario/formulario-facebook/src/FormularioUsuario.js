@@ -2,19 +2,22 @@
 
 import React, { useState } from 'react'
 import './Formulario.css';
-import { CSSTransition } from 'react-transition-group';
 
 
 
 
 
-export const FormularioUsuario = (props) => {
+
+export const FormularioUsuario = ({reciveUsuario}) => {
 
   const [message, setMesagge]=useState('');
 
 
     let actionMessage=(e)=>{
-        props(message);
+      const newValue = e.target.value;
+      setMesagge(newValue);
+      
+        reciveUsuario(newValue);
 
     }
  
@@ -24,9 +27,8 @@ export const FormularioUsuario = (props) => {
     <div className='design_box'>
 
 
-
-
-        <input  onChange={(e)=>setMesagge(e.target.value)}   placeholder='Introduzca su usuario...' className='input' type='text'/>
+        <input  onChange={actionMessage} value={message} 
+         placeholder='Introduzca su usuario...' className='input' type='text'/>
        
        
           

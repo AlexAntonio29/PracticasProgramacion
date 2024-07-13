@@ -26,13 +26,15 @@ function App() {
   const [isVisibleFinal, setIsVisibleFinal]= useState(false);
 
 
+
   const[usuario,setUsuario]=useState('');
+ 
 
 
 
   let actionVisibilityUsuario=(e)=>{
 
-    if(usuario==''){
+    if(usuario===''){
       alert("No puedes dejar el apartado vacío")
     }else{
 
@@ -42,18 +44,39 @@ function App() {
 }
 
   let actionVisibilityPersonales=()=>{
+
+  if(nombre===''||apellidoPaterno===''||apellidoMaterno===''){
+    alert("No puedes dejar el apartado vacio");
+  }else{
+    
     setIsVisiblePersonales(!isVisiblePersonales);
-    setIsVisibleLoc(true);
+    setIsVisibleLoc(true);}
   }
 
   let actionVisiblityLoc=(e)=>{
+  if(estado===''||ciudad===''||cp===''||colonia===''||domicilio===''||numExterior===""){
+    
+    alert("No puedes dejar el apartado vacio");
+
+  }else{  
+    
+   
     setIsVisibleLoc(!isVisibleLocalizacion);
-    setIsVisisblePrivados(true);
+    setIsVisisblePrivados(true);}
   }
 
   let actionVisiblityPriv=(e)=>{
-    setIsVisisblePrivados(!isVisiblePrivados);
-    setIsVisibleFinal(true);
+
+    if(pass===''||correo===''){
+      alert("No puedes dejar el apartado vacio");
+    }
+    else{
+      alert (pass+" "+correo);
+      setIsVisisblePrivados(!isVisiblePrivados);
+      setIsVisibleFinal(true);
+    }
+
+ 
 
   }
 
@@ -68,7 +91,84 @@ function App() {
 
 setUsuario(e);
 
+console.log(e);
+
   }
+
+//Datos Personales
+
+const [nombre, setNombre]= useState('');
+const [apellidoPaterno, setApellidoPaterno] = useState('');
+const [apellidoMaterno, setApellidoMaterno] = useState ('');
+
+  let functionNombre =(e)=> {
+    setNombre(e);
+    
+    
+  }
+
+  let functionPaterno =(e)=>{
+    setApellidoPaterno(e);
+    console.log(e);
+    console.log(apellidoPaterno);
+  }
+
+  let functionMaterno =(e)=>{
+    setApellidoMaterno(e);
+    console.log(e);
+    console.log(apellidoMaterno);
+  }
+//DATOS LOCALIZACION
+
+
+let [estado,setEstado]=useState('');
+let [ciudad, setCiudad]= useState('');
+let [cp, setCp] = useState('');
+let [colonia, setColonia] = useState('');
+let [domicilio, setDomicilio] = useState('');
+let [numExterior, setNumExterior]= useState('');
+
+
+  let functionEstado =(e)=>{
+
+    setEstado(e)
+
+  }
+
+  let funtionCiudad =(e)=>{
+setCiudad(e);
+  }
+
+  let functionCodigoPostal =(e)=>{
+setCp(e);
+  }
+
+  let functionColonia =(e)=>{
+  setColonia(e);
+  }
+
+  let functionDomicilio =(e)=>{
+    setDomicilio(e);
+
+  }
+
+  let functionNumExterior =(e)=>{
+      setNumExterior(e);
+  }
+
+//Datos Privados
+
+const[pass,setPass]= useState('');
+const[correo, setCorreo]= useState('');
+
+let functionPass=(e)=>{
+setPass(e);
+}
+let functionCorreo =(e)=>{
+setCorreo(e);
+}
+
+
 
   return (
     <div className="App">
@@ -97,7 +197,11 @@ setUsuario(e);
         unmountOnExit
       >
 
-        <FormularioDatosPersonales/>
+        <FormularioDatosPersonales  
+        recibeNombre={functionNombre} 
+        recibeAppPaterno={functionPaterno} 
+        recibeAppMaterno={functionMaterno}
+        />
          
          </CSSTransition>
 
@@ -108,7 +212,15 @@ setUsuario(e);
         unmountOnExit
       >
 
-        <FormularioLocalizacion/>
+        <FormularioLocalizacion
+        recibeEstado={functionEstado}
+        recibeCiudad={funtionCiudad}
+        recibeCP={functionCodigoPostal}
+        recibeColonia={functionColonia}
+        recibeDomicilio={functionDomicilio}
+        recibeNum={functionNumExterior}
+
+        />
          
          </CSSTransition>
 
@@ -119,7 +231,11 @@ setUsuario(e);
         unmountOnExit
       >
 
-        <FormularioPrivados/>
+        <FormularioPrivados
+        recibePass={functionPass}
+        recibeCorreo={functionCorreo}
+        
+        />
          
          </CSSTransition>
 
