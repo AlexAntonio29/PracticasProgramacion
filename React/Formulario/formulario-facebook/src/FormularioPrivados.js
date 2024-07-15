@@ -18,9 +18,9 @@ props.recibeCorreo(e.target.value);
   return (
     <div className='design_box'>
         
-        <input onChange={actionPass} value={pass}
+        <input onChange={actionCorreo} value={correo}
          placeholder='Correo Electronico' className='input' type='text'/>
-        <input  onChange={actionCorreo}  value={correo}
+        <input  onChange={actionPass}  value={pass}
         placeholder='Contraseña' className='input' type='password'/>
         
 

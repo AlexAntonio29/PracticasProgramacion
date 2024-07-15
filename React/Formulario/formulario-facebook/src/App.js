@@ -1,4 +1,9 @@
+
+
+/**/
 import logo from './logo2.svg';
+
+//conectar a bd
 
 
 
@@ -15,9 +20,15 @@ import { FormularioFinal } from './FormularioFinal.js';
 import React, { useState } from 'react'
 import './Formulario.css';
 import { CSSTransition } from 'react-transition-group';
+import axios from 'axios';
+
+
 
 
 function App() {
+
+
+
 
   const [isVisibleUsuario, setIsVisibleUsuario] = useState(true);
   const [isVisiblePersonales, setIsVisiblePersonales] = useState(false);
@@ -29,7 +40,9 @@ function App() {
 
   const[usuario,setUsuario]=useState('');
  
+//user usuarios
 
+const [userId, setUserId] = useState(null);
 
 
   let actionVisibilityUsuario=(e)=>{
@@ -38,20 +51,68 @@ function App() {
       alert("No puedes dejar el apartado vacío")
     }else{
 
+    handleSubmit();
+   
     setIsVisibleUsuario(!isVisibleUsuario);
     setIsVisiblePersonales(true);
+
+
+
   }
 }
+
+
+const handleSubmit = async () => {
+  const formData = { usuario };
+
+  try {
+    const response = await axios.post('http://localhost:5000/save-step1', formData);
+    setUserId(response.data.userId); // Save the user ID for the next step
+   
+  } catch (error) {
+    
+  }
+};
+
+
+const handleSubmitStep2 = async () => {
+  const formData = { nombre, apellidoPaterno, apellidoMaterno };
+
+  try {
+    await axios.post(`http://localhost:5000/save-step2/${userId}`, formData);
+   
+  } catch (error) {
+
+  }
+};
+
 
   let actionVisibilityPersonales=()=>{
 
   if(nombre===''||apellidoPaterno===''||apellidoMaterno===''){
     alert("No puedes dejar el apartado vacio");
   }else{
-    
+    handleSubmitStep2();
+
     setIsVisiblePersonales(!isVisiblePersonales);
     setIsVisibleLoc(true);}
   }
+
+
+
+  //Step 3
+
+  const handleSubmitStep3 = async () => {
+    const formData = { estado, ciudad, cp, colonia, domicilio, numExterior };
+
+    try {
+      await axios.post(`http://localhost:5000/save-step3/${userId}`, formData);
+     
+     
+    } catch (error) {
+     
+    }
+  };
 
   let actionVisiblityLoc=(e)=>{
   if(estado===''||ciudad===''||cp===''||colonia===''||domicilio===''||numExterior===""){
@@ -60,10 +121,25 @@ function App() {
 
   }else{  
     
-   
+    handleSubmitStep3();
     setIsVisibleLoc(!isVisibleLocalizacion);
     setIsVisisblePrivados(true);}
   }
+
+
+
+  const handleSubmitStep4 = async () => {
+    const formData = { correo, pass };
+
+    try {
+
+      
+      await axios.post(`http://localhost:5000/save-step4/${userId}`, formData);
+      alert('All data saved successfully');
+    } catch (error) {
+      alert('Error saving step 4 data');
+    }
+  };
 
   let actionVisiblityPriv=(e)=>{
 
@@ -71,7 +147,10 @@ function App() {
       alert("No puedes dejar el apartado vacio");
     }
     else{
-      alert (pass+" "+correo);
+
+      handleSubmitStep4();
+
+    
       setIsVisisblePrivados(!isVisiblePrivados);
       setIsVisibleFinal(true);
     }
@@ -164,6 +243,8 @@ const[correo, setCorreo]= useState('');
 let functionPass=(e)=>{
 setPass(e);
 }
+
+
 let functionCorreo =(e)=>{
 setCorreo(e);
 }

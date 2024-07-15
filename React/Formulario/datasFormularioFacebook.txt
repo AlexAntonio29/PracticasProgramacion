@@ -1,0 +1,12 @@
+userName: alex2910
+
+heroku:
+Implosi@n291001
+
+
+
+password:
+xAkeamOOKTu6H3H8
+
+sustituir <password> por xAkeamOOKTu6H3H8
+mongodb+srv://alex2910:<password>@databaseformalryfaceboo.yrr1tgy.mongodb.net/?retryWrites=true&w=majority&appName=dataBaseFormalryFacebook
