@@ -14,7 +14,7 @@ void printPila(TPila p)
    printf("\n");
 }
 
-main()
+int main()
 {
     TPila p;
     float e;
