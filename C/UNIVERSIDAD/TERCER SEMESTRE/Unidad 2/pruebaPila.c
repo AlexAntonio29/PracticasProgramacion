@@ -1,6 +1,6 @@
 //pruebaPila.c prueba las operaciones de pila.h
 #include <stdio.h>
-#include "pila.h"
+#include "pilachar.h"
 
 #define MAX 20
 #define LONGF 6
@@ -12,7 +12,7 @@ void printPila(TPila p)
    char elem;
    
     printf("Tope");
-	while(pilaVacia(p) != 1){
+	while(pilaVacia(p) != 0){
         pop(&p, &elem);
 		printf("==>%c ",elem);
 	}

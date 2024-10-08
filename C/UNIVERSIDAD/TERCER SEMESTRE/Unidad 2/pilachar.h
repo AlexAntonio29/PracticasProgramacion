@@ -36,7 +36,7 @@ void liberaPila(TPila *p)
 
 int pilaVacia(TPila p)
 {
-	if (p.tope == -1) return 1;
+	if (p.tope != -1) return 1;
 	else return 0;
 	//return p.tope == -1;
 }
@@ -76,7 +76,7 @@ int push(TPila *p, Tipo n)
 
 int pop(TPila *p, Tipo *elem)
 {
-	if(pilaVacia(*p) != 1){
+	if(pilaVacia(*p) != -1){
 		*elem = p->vector[p->tope];
 		p->tope--;	
 		return 1;
