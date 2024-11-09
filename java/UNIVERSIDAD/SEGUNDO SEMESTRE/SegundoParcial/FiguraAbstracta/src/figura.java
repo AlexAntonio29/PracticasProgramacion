@@ -1,15 +1,15 @@
-public abstract class Figura {
+public abstract class figura {
     protected double x;
     protected double y;
 
-    public Figura(double x, double y){
+    public figura(double x, double y){
         this.x=x;
         this.y=y;
     }
 
 
 
-    public Figura(){}
+    public figura(){}
     public abstract double Area();
     public abstract double Perimetro();
 

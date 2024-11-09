@@ -1,4 +1,4 @@
-public class Cuadrado extends Figura{
+public class Cuadrado extends figura {
 
     public Cuadrado(){}
     public Cuadrado(double x,double y){

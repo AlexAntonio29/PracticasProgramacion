@@ -1,4 +1,4 @@
-public class Pentagono extends Figura{
+public class Pentagono extends figura {
 
     double apotema;
     public Pentagono(){

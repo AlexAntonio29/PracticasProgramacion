@@ -1,10 +1,15 @@
-import java.awt.geom.Area;
 import java.util.Scanner;
 
-public class TestFigura {
+
+/*
+* Cesar Arturo Belmontes Zacarías
+* POO
+* */
+
+public class main {
     public static void main(String[] args) {
         Scanner lector = new Scanner(System.in);
-        Figura figura = new Figura() {
+        figura figura = new figura() {
 
             @Override
             public double Area() {
