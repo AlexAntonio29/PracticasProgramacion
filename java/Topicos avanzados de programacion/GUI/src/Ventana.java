@@ -2,6 +2,9 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Ventana extends JFrame {
+    public static void main(String[] args) {
+        new Ventana();
+    }
 
     public Ventana() {
         super("Ingresa Edad");
@@ -16,5 +19,7 @@ public class Ventana extends JFrame {
         cp.add(etiqueta);
         cp.add(texto);
         cp.add(boton);
+        setVisible(true);
     }
+
 }

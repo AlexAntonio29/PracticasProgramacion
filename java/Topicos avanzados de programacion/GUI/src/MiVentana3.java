@@ -26,12 +26,12 @@ public class MiVentana3 extends JFrame {
        panelDatos.setLayout(gl);
 
 
-       panelFecha.add(new JLabel("Nombre:",SwingConstants.CENTER));
-       panelFecha.add(new JTextField(10));
-       panelFecha.add(new JLabel("DNI:"));
-       panelFecha.add(new JTextField(10));
-       panelFecha.add(new JLabel("Fecha de nacimiento"));
-       panelFecha.add(panelFecha);
+       panelDatos.add(new JLabel("Nombre:",SwingConstants.CENTER));
+       panelDatos.add(new JTextField(10));
+       panelDatos.add(new JLabel("DNI:",SwingConstants.CENTER));
+       panelDatos.add(new JTextField(10));
+       panelDatos.add(new JLabel("Fecha de nacimiento"));
+       panelDatos.add(panelFecha);
 
 
 

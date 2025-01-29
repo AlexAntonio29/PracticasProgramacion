@@ -9,7 +9,7 @@ public class VentanaTest {
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setVisible(true);
 
-            MiVentana v= new MiVentana();
+            MiVentana3 v= new MiVentana3();
     }
 
 

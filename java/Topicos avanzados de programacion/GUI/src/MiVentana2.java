@@ -2,6 +2,9 @@ import javax.swing.*;
 import java.awt.*;
 
 public class MiVentana2 extends JFrame {
+    public static void main(String[] args) {
+        new MiVentana2();
+    }
 
     public MiVentana2() {
 
