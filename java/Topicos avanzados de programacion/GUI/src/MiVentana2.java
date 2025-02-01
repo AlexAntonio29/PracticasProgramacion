@@ -27,5 +27,7 @@ public class MiVentana2 extends JFrame {
         cp.add(new JButton("0"));
         cp.add(new JButton("#"));
 
+        setVisible(true);
+
     }
 }
