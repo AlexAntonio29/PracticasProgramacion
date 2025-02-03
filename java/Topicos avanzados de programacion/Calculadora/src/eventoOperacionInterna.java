@@ -10,7 +10,7 @@ public class eventoOperacionInterna {
         boolean p=true;//se usa para el modulo para que no repita el procesos de modulo
         ArrayList<String> numeros = new ArrayList<>();
         ArrayList<String> SumaReales = new ArrayList<>();//para agregar numero
-        String num = (String) resultado.toString();
+        String num = (String) resultado;
         String editNum = "0";
         String caracteresNumeros = "";
         int longitud = num.length();
@@ -88,19 +88,6 @@ public class eventoOperacionInterna {
                     }
 
                     break;
-                case "%":
-
-                    if (p){
-                        p=false;
-                        SumaReales.add(modulo(n, context));
-
-                        break;
-                    }else {
-
-                        p = true;
-                    }
-
-
                 default:
 
                     break;
@@ -119,11 +106,6 @@ public class eventoOperacionInterna {
 
             }
 
-            if (UltimoCaracter=='%'&&p){
-
-                SumaReales.add(editNum);
-            }
-
             i++;
 
         }
@@ -140,12 +122,7 @@ public class eventoOperacionInterna {
         String UltimoSigno = (signos.get(signos.size() - 1));
         char[] signo = UltimoSigno.toCharArray();
         char Usigno = signo[signo.length - 1];
-        if (Usigno == '%'&&p) {
 
-            SumT=modulo(SumT,context);
-
-            return SumT;
-        }
 
         if (Double.parseDouble(SumT) % 1 != 0)
             return SumT;
@@ -197,11 +174,11 @@ public class eventoOperacionInterna {
     }
 
 
-    public String division(String n1, String n2, Context getApplicationContext) {
+    public String division(String n1, String n2) {
         System.out.println(n2);
 
         if (Double.parseDouble(n2) == 0) {
-            mostrarToast(getApplicationContext, "Operacion Invalida");
+           //generar mensaje de error
             return n2;
         } else {
             for (int i = 0; i < n1.length(); i++) {
@@ -238,8 +215,8 @@ public class eventoOperacionInterna {
         }
     }
 
-    public void mostrarToast(Context context, String mensaje) {
-        Toast.makeText(context, mensaje, Toast.LENGTH_SHORT).show();
+    public void mostrarAdvertenciaError(String mensaje) {
+        //Generar mensaje de error
     }
 }
 

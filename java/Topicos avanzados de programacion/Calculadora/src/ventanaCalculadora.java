@@ -20,7 +20,7 @@ public class ventanaCalculadora extends JFrame {
 
         cp.add(resultado);
 
-        String[] cadenaBotones={"7","8","9","+","4","5","6","-","1","2","3","*",".","0","C","/","MR","ML","X^n","RAIZ","M+","M-","="};
+        String[] cadenaBotones={"7","8","9","+","4","5","6","-","1","2","3","x",".","0","C","/","MR","ML","X^n","RAIZ","M+","M-","="};
         for (int i = 0; i <23; i++) {
     JButton boton=new JButton();
             boton.setFont(new Font("Arial", Font.BOLD, 15));
@@ -36,6 +36,7 @@ public class ventanaCalculadora extends JFrame {
                     eventoPulsado action =new eventoPulsado(cadenaBotones[geti],resultado.getText());
                     action.action();
                     resultado.setText(action.getCadenaRes());
+
 
                 }
             });

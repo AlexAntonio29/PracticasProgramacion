@@ -6,6 +6,7 @@ import java.util.Objects;
 public class eventoPulsado {
     String cadena;
     String cadenaRes;
+    eventoOperacionInterna operacion=new eventoOperacionInterna();
 
 
 
@@ -37,14 +38,14 @@ public class eventoPulsado {
     public void action() {
         String apuntador="";
 
-    if(cadenaRes!=null&& cadenaRes.length()!=0) apuntador=String.valueOf(cadenaRes.charAt(cadenaRes.length()-1));
-        System.out.println("");
-        System.out.println(apuntador);
+    if(cadenaRes!=null&& !cadenaRes.isEmpty()) apuntador=String.valueOf(cadenaRes.charAt(cadenaRes.length()-1));
+     //   System.out.println("");
+      //  System.out.println(apuntador);
 
         switch(cadena){
             case "+": eventoSuma(apuntador); break;
             case "-": eventoResta(apuntador); break;
-            case "*": eventoMultiplicacion(apuntador); break;
+            case "x": eventoMultiplicacion(apuntador); break;
             case ".": eventoPunto(apuntador); break;
             case "C": eventoC(); break;
             case "/": eventoDiagonal(apuntador); break;
@@ -89,12 +90,15 @@ public class eventoPulsado {
     public void eventoRaiz(){}
     public void eventoMSuma(){}
     public void eventoMResta(){}
-    public void eventoIgual(){}
+    public void eventoIgual(){
+        cadenaRes= operacion.operation(cadenaRes);
+
+    }
 
 
 public void eventoSignos(String apuntador){
     if (!cadenaRes.isEmpty() &&!Objects.equals(apuntador, "+") && !Objects.equals(apuntador, "-")
-            && !Objects.equals(apuntador, "*") && !Objects.equals(apuntador, "/")&&
+            && !Objects.equals(apuntador, "x") && !Objects.equals(apuntador, "/")&&
             !Objects.equals(apuntador, ".")) cadenaRes=cadenaRes+cadena;
 }
 }
