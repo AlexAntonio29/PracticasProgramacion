@@ -84,7 +84,12 @@ public class eventoPulsado {
     public void eventoDiagonal(String apuntador){
         eventoSignos(apuntador);
     }
-    public void eventoMR(){}
+    public void eventoMR(){
+        String cadenaTemporal= operacion.operation(cadenaRes);
+
+        if (cadenaTemporal.isEmpty())  JOptionPane.showMessageDialog(null,"Datos mal implementados");
+        else JOptionPane.showMessageDialog(null,"");
+    }
     public void eventoML(){}
     public void eventoXn(){}
     public void eventoRaiz(){}
