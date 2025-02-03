@@ -1,16 +1,19 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Objects;
 
-public class eventoPulsado implements ActionListener {
+public class eventoPulsado {
     String cadena;
     String cadenaRes;
-    JTextField resultado;
 
-    eventoPulsado(String cadena, String cadenaRes, JTextField resultado){
+
+
+    eventoPulsado(String cadena, String cadenaRes){
         this.cadena = cadena;
         this.cadenaRes = cadenaRes;
-        this.resultado = resultado;
+
+
 
     }
 
@@ -31,38 +34,55 @@ public class eventoPulsado implements ActionListener {
         this.cadena = cadena;
     }
 
-    public void actionPerformed(ActionEvent e) {
+    public void action() {
+        String apuntador="";
 
+    if(cadenaRes!=null&& cadenaRes.length()!=0) apuntador=String.valueOf(cadenaRes.charAt(cadenaRes.length()-1));
+        System.out.println("");
+        System.out.println(apuntador);
 
         switch(cadena){
-            case "+": break;
-            case "-": break;
-            case "*": break;
-            case ".": break;
-            case "C": break;
-            case "/": break;
-            case "MR": break;
-            case "ML": break;
-            case "X^n": break;
-            case "RAIZ": break;
-            case "M+": break;
-            case "M-": break;
-            case "=": break;
+            case "+": eventoSuma(apuntador); break;
+            case "-": eventoResta(apuntador); break;
+            case "*": eventoMultiplicacion(apuntador); break;
+            case ".": eventoPunto(apuntador); break;
+            case "C": eventoC(); break;
+            case "/": eventoDiagonal(apuntador); break;
+            case "MR": eventoMR(); break;
+            case "ML": eventoML(); break;
+            case "X^n": eventoXn(); break;
+            case "RAIZ": eventoRaiz(); break;
+            case "M+": eventoMSuma(); break;
+            case "M-": eventoMResta(); break;
+            case "=": eventoIgual(); break;
 
             default :
                 cadenaRes=cadenaRes+cadena;
-                resultado.setText(cadenaRes);
                 break;
         }
 
     }
 
-    public void eventoSuma(){}
-    public void eventoResta(){}
-    public void eventoMultiplicacion(){}
-    public void eventoPunto(){}
-    public void eventoC(){}
-    public void eventoDiagonal(){}
+    public void eventoSuma(String apuntador){
+        eventoSignos(apuntador);
+
+    }
+    public void eventoResta(String apuntador){
+        eventoSignos(apuntador);
+    }
+    public void eventoMultiplicacion(String apuntador){
+        eventoSignos(apuntador);
+    }
+    public void eventoPunto(String apuntador){
+        eventoSignos(apuntador);
+    }
+    public void eventoC(){
+        cadenaRes="";
+    }
+
+    public void eventoDiagonal(String apuntador){
+        eventoSignos(apuntador);
+    }
     public void eventoMR(){}
     public void eventoML(){}
     public void eventoXn(){}
@@ -72,5 +92,9 @@ public class eventoPulsado implements ActionListener {
     public void eventoIgual(){}
 
 
-
+public void eventoSignos(String apuntador){
+    if (!cadenaRes.isEmpty() &&!Objects.equals(apuntador, "+") && !Objects.equals(apuntador, "-")
+            && !Objects.equals(apuntador, "*") && !Objects.equals(apuntador, "/")&&
+            !Objects.equals(apuntador, ".")) cadenaRes=cadenaRes+cadena;
+}
 }

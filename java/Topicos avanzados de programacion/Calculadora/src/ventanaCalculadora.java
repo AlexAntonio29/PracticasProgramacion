@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ventanaCalculadora extends JFrame {
@@ -15,6 +16,8 @@ public class ventanaCalculadora extends JFrame {
 
 
         JTextField resultado=new JTextField(25);
+
+
         cp.add(resultado);
 
         String[] cadenaBotones={"7","8","9","+","4","5","6","-","1","2","3","*",".","0","C","/","MR","ML","X^n","RAIZ","M+","M-","="};
@@ -26,8 +29,16 @@ public class ventanaCalculadora extends JFrame {
 
             boton.setText(cadenaBotones[i]);
             if (cadenaBotones[i].equals("=")) boton.setPreferredSize(new Dimension(106, 40));
+            int geti=i;
+            boton.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    eventoPulsado action =new eventoPulsado(cadenaBotones[geti],resultado.getText());
+                    action.action();
+                    resultado.setText(action.getCadenaRes());
 
-            boton.addActionListener(new eventoPulsado(cadenaBotones[i],resultado.getText(),resultado));
+                }
+            });
 
             cp.add(boton);
 
