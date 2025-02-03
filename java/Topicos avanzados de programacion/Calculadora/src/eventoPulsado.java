@@ -1,12 +1,14 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class eventoPulsado {
     String cadena;
     String cadenaRes;
-    eventoOperacionInterna operacion=new eventoOperacionInterna();
+    private static ArrayList<String> conjuntoEventosM=new ArrayList<>();
+     eventoOperacionInterna operacion=new eventoOperacionInterna();
 
 
 
@@ -52,9 +54,9 @@ public class eventoPulsado {
             case "MR": eventoMR(); break;
             case "ML": eventoML(); break;
             case "X^n": eventoXn(); break;
-            case "RAIZ": eventoRaiz(); break;
-            case "M+": eventoMSuma(); break;
-            case "M-": eventoMResta(); break;
+            case "√": eventoRaiz(); break;
+            case "M+": eventoMSuma(apuntador); break;
+            case "M-": eventoMResta(apuntador); break;
             case "=": eventoIgual(); break;
 
             default :
@@ -85,25 +87,73 @@ public class eventoPulsado {
         eventoSignos(apuntador);
     }
     public void eventoMR(){
-        String cadenaTemporal= operacion.operation(cadenaRes);
-
+      //  String cadenaTemporal= operacion.operation(cadenaRes);
+        String cadenaTemporal="";
+        for (String evento: conjuntoEventosM){
+            System.out.printf(cadenaTemporal);
+            cadenaTemporal+=evento;
+        }
+        String resultadoM= operacion.operation(cadenaTemporal);
         if (cadenaTemporal.isEmpty())  JOptionPane.showMessageDialog(null,"Datos mal implementados");
-        else JOptionPane.showMessageDialog(null,"");
+        else JOptionPane.showMessageDialog(null,cadenaTemporal+"\nResultado="+resultadoM);
     }
-    public void eventoML(){}
-    public void eventoXn(){}
-    public void eventoRaiz(){}
-    public void eventoMSuma(){}
-    public void eventoMResta(){}
+    public void eventoML(){
+        if (eventosM(cadenaRes)) JOptionPane.showMessageDialog(null,operacion.factorial(cadenaRes));
+
+    }
+    public void eventoXn(){
+
+
+
+
+    }
+    public void eventoRaiz(){
+        //√
+
+
+    }
+    public void eventoMSuma(String apuntador){
+        String cadenaTemporal="";
+        if (eventosM(apuntador)) {
+            if (conjuntoEventosM.isEmpty()) cadenaTemporal=operacion.operation(cadenaRes);
+            else cadenaTemporal="+"+operacion.operation(cadenaRes);
+
+            System.out.printf(cadenaTemporal);
+            conjuntoEventosM.add(cadenaTemporal);
+        }
+
+    }
+    public void eventoMResta(String apuntador){
+        String cadenaTemporal="";
+        if (eventosM(apuntador)) {
+
+            cadenaTemporal="-"+operacion.operation(cadenaRes);
+            System.out.printf(cadenaTemporal);
+            conjuntoEventosM.add(cadenaTemporal);
+        }
+    }
     public void eventoIgual(){
         cadenaRes= operacion.operation(cadenaRes);
+
+
 
     }
 
 
 public void eventoSignos(String apuntador){
+
+
+
     if (!cadenaRes.isEmpty() &&!Objects.equals(apuntador, "+") && !Objects.equals(apuntador, "-")
             && !Objects.equals(apuntador, "x") && !Objects.equals(apuntador, "/")&&
             !Objects.equals(apuntador, ".")) cadenaRes=cadenaRes+cadena;
 }
+
+public boolean eventosM(String apuntador){
+    if (!cadenaRes.isEmpty() &&!Objects.equals(apuntador, "+") && !Objects.equals(apuntador, "-")
+            && !Objects.equals(apuntador, "x") && !Objects.equals(apuntador, "/")&&
+            !Objects.equals(apuntador, "."))
+        return true;
+else return false;
+    }
 }

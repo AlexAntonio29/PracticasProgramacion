@@ -43,7 +43,7 @@ public class eventoOperacionInterna {
         String n = "1";
         for (String signo : signos) {
             char UltimoCaracter = num.charAt(num.length() - 1);
-            System.out.println(signo);
+           // System.out.println(signo);
             switch (signo) {
                 case "x":
                     if (UltimoCaracter == 'x') return "";
@@ -205,6 +205,9 @@ public class eventoOperacionInterna {
     }
 
 
+
+
+
     public boolean esNumero(char str) {
 
         try {
@@ -218,7 +221,21 @@ public class eventoOperacionInterna {
     public void mostrarAdvertenciaError(String mensaje) {
         //Generar mensaje de error
     }
+
+    //METODOS PUBLICOS
+        public String factorial(String n){
+        String resultado=n;
+        for (int i = Integer.parseInt(n); i>2; i--){
+            int num=Integer.parseInt(resultado);
+            resultado= String.valueOf(num*(i-1));
+
+        }
+        return resultado;
+        }
 }
+
+
+
 
 
 

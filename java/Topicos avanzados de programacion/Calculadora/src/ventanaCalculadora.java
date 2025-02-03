@@ -20,7 +20,7 @@ public class ventanaCalculadora extends JFrame {
 
         cp.add(resultado);
 
-        String[] cadenaBotones={"7","8","9","+","4","5","6","-","1","2","3","x",".","0","C","/","MR","ML","X^n","RAIZ","M+","M-","="};
+        String[] cadenaBotones={"7","8","9","+","4","5","6","-","1","2","3","x",".","0","C","/","MR","ML","X^n","√","M+","M-","="};
         for (int i = 0; i <23; i++) {
     JButton boton=new JButton();
             boton.setFont(new Font("Arial", Font.BOLD, 15));
