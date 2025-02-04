@@ -6,6 +6,7 @@ public class eventoOperacionInterna {
     }
 
     public String operation(String resultado) {
+        if(resultado.isEmpty()) return "";
         ArrayList<String> signos = new ArrayList<>();
         boolean p=true;//se usa para el modulo para que no repita el procesos de modulo
         ArrayList<String> numeros = new ArrayList<>();
@@ -25,7 +26,7 @@ public class eventoOperacionInterna {
                 if (i == num.length() - 1)
                     numeros.add(caracteresNumeros);
             } else {
-                if (caracter == 'x' || caracter == '/' || caracter == '+' || caracter == '-' || caracter == '%')
+                if (caracter == 'x' || caracter == '/' || caracter == '+' || caracter == '-' || caracter == '√'|| caracter == '^')
                     signos.add(String.valueOf(caracter));
                 if (i != 0)
                     numeros.add(caracteresNumeros);
@@ -88,6 +89,27 @@ public class eventoOperacionInterna {
                     }
 
                     break;
+
+                case "^":
+                    if (UltimoCaracter == '^') return "";
+                    else {
+                        p=false;
+                        editNum = potencia(n, numeros.get(i));
+
+                    }
+                    break;
+
+                case "√":
+
+                    if (p){
+                        p=false;
+                        SumaReales.add(raiz(numeros.get(i)));
+
+                        break;
+                    }else {
+
+                        p = true;
+                    }
                 default:
 
                     break;
@@ -132,6 +154,8 @@ public class eventoOperacionInterna {
 
 
     public String suma(String n1) {
+
+
         for (int i = 0; i < n1.length(); i++) {
             char caracter = n1.charAt(i);
             if (caracter == '.') return String.valueOf(Double.parseDouble(n1) * 1);
@@ -206,6 +230,40 @@ public class eventoOperacionInterna {
 
 
 
+    public String potencia(String n1, String n2){
+        for (int i = 0; i < n1.length(); i++) {
+            char caracter = n1.charAt(i);
+            if (caracter == '.') {
+                double r = Math.pow(Double.parseDouble(n1),Double.parseDouble(n2));
+                double resultadoRedondeado = Math.round(r * 100.0) / 100.0;
+                return String.valueOf(resultadoRedondeado);
+            }
+        }
+        for (int i = 0; i < n2.length(); i++) {
+            char caracter = n2.charAt(i);
+            if (caracter == '.') {
+                double r = Math.pow(Double.parseDouble(n1),Double.parseDouble(n2));
+                double resultadoRedondeado = Math.round(r * 100.0) / 100.0;
+                return String.valueOf(resultadoRedondeado);
+            }
+        }
+
+        double r= Math.pow(Double.parseDouble(n1),Double.parseDouble(n2));
+        double resultadoRedondeado = Math.round(r * 100.0) / 100.0;
+        return String.valueOf(resultadoRedondeado);
+    }
+
+
+
+    public String raiz(String n1) {
+        System.out.printf(n1);
+        double r = Math.sqrt(Double.parseDouble(n1));
+
+        // mostrarToast(m,String.valueOf(r));
+
+        return String.valueOf(r);
+
+    }
 
 
     public boolean esNumero(char str) {

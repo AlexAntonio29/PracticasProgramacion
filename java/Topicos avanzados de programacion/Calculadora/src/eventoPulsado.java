@@ -53,8 +53,8 @@ public class eventoPulsado {
             case "/": eventoDiagonal(apuntador); break;
             case "MR": eventoMR(); break;
             case "ML": eventoML(); break;
-            case "X^n": eventoXn(); break;
-            case "√": eventoRaiz(); break;
+            case "X^n": eventoXn(apuntador); break;
+            case "√": eventoRaiz(apuntador); break;
             case "M+": eventoMSuma(apuntador); break;
             case "M-": eventoMResta(apuntador); break;
             case "=": eventoIgual(); break;
@@ -101,14 +101,19 @@ public class eventoPulsado {
         if (eventosM(cadenaRes)) JOptionPane.showMessageDialog(null,operacion.factorial(cadenaRes));
 
     }
-    public void eventoXn(){
+    public void eventoXn(String apuntador){
 
-
+        if (eventosM(apuntador)) cadenaRes=cadenaRes+"^";
 
 
     }
-    public void eventoRaiz(){
+    public void eventoRaiz(String apuntador){
         //√
+        if (!Objects.equals(apuntador, "+") && !Objects.equals(apuntador, "-")
+                && !Objects.equals(apuntador, "x") && !Objects.equals(apuntador, "/")&&
+                !Objects.equals(apuntador, ".")&& !Objects.equals(apuntador, "^")&& !Objects.equals(apuntador, "√"))
+            cadenaRes=cadenaRes+"√";
+
 
 
     }
@@ -146,13 +151,13 @@ public void eventoSignos(String apuntador){
 
     if (!cadenaRes.isEmpty() &&!Objects.equals(apuntador, "+") && !Objects.equals(apuntador, "-")
             && !Objects.equals(apuntador, "x") && !Objects.equals(apuntador, "/")&&
-            !Objects.equals(apuntador, ".")) cadenaRes=cadenaRes+cadena;
+            !Objects.equals(apuntador, ".")&& !Objects.equals(apuntador, "^")&& !Objects.equals(apuntador, "√")) cadenaRes=cadenaRes+cadena;
 }
 
 public boolean eventosM(String apuntador){
     if (!cadenaRes.isEmpty() &&!Objects.equals(apuntador, "+") && !Objects.equals(apuntador, "-")
             && !Objects.equals(apuntador, "x") && !Objects.equals(apuntador, "/")&&
-            !Objects.equals(apuntador, "."))
+            !Objects.equals(apuntador, ".")&& !Objects.equals(apuntador, "^")&& !Objects.equals(apuntador, "√"))
         return true;
 else return false;
     }
