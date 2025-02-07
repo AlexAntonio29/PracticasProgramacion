@@ -1,0 +1,8 @@
+U:\Documents\GitHub\Cuentas\AlexAntonio29\PRACTICAS-PROGRAMACION\C#\SharpDeveloper\GUI_CALCULADORA\GUI_CALCULADORA\bin\Debug\GUI_CALCULADORA.exe
+U:\Documents\GitHub\Cuentas\AlexAntonio29\PRACTICAS-PROGRAMACION\C#\SharpDeveloper\GUI_CALCULADORA\GUI_CALCULADORA\bin\Debug\GUI_CALCULADORA.pdb
+U:\Documents\GitHub\Cuentas\AlexAntonio29\PRACTICAS-PROGRAMACION\C#\SharpDeveloper\GUI_CALCULADORA\GUI_CALCULADORA\obj\x86\Debug\GUI_CALCULADORA.csprojResolveAssemblyReference.cache
+U:\Documents\GitHub\Cuentas\AlexAntonio29\PRACTICAS-PROGRAMACION\C#\SharpDeveloper\GUI_CALCULADORA\GUI_CALCULADORA\obj\x86\Debug\GUI_CALCULADORA.exe
+U:\Documents\GitHub\Cuentas\AlexAntonio29\PRACTICAS-PROGRAMACION\C#\SharpDeveloper\GUI_CALCULADORA\GUI_CALCULADORA\obj\x86\Debug\GUI_CALCULADORA.pdb
+U:\Documents\GitHub\Cuentas\AlexAntonio29\PRACTICAS-PROGRAMACION\C#\SharpDeveloper\GUI_CALCULADORA\GUI_CALCULADORA\obj\x86\Debug\GUI_CALCULADORA.MainForm.resources
+U:\Documents\GitHub\Cuentas\AlexAntonio29\PRACTICAS-PROGRAMACION\C#\SharpDeveloper\GUI_CALCULADORA\GUI_CALCULADORA\obj\x86\Debug\GUI_CALCULADORA.csproj.GenerateResource.Cache
+U:\Documents\GitHub\Cuentas\AlexAntonio29\PRACTICAS-PROGRAMACION\C#\SharpDeveloper\GUI_CALCULADORA\GUI_CALCULADORA\obj\x86\Debug\GUI_CALCULADORA.Design.resources

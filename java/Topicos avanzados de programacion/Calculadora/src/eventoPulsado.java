@@ -6,8 +6,9 @@ import java.util.Objects;
 
 public class eventoPulsado {
     String cadena;
-    String cadenaRes;
+    String cadenaRes;//regresa un resultado
     private static ArrayList<String> conjuntoEventosM=new ArrayList<>();
+    private static Boolean punto=true;
      eventoOperacionInterna operacion=new eventoOperacionInterna();
 
 
@@ -40,10 +41,14 @@ public class eventoPulsado {
     public void action() {
         String apuntador="";
 
+
+
     if(cadenaRes!=null&& !cadenaRes.isEmpty()) apuntador=String.valueOf(cadenaRes.charAt(cadenaRes.length()-1));
      //   System.out.println("");
       //  System.out.println(apuntador);
 
+
+        System.out.println(punto);
         switch(cadena){
             case "+": eventoSuma(apuntador); break;
             case "-": eventoResta(apuntador); break;
@@ -63,7 +68,7 @@ public class eventoPulsado {
                 cadenaRes=cadenaRes+cadena;
                 break;
         }
-
+        if (Objects.equals(cadena, ".")) punto=false;
     }
 
     public void eventoSuma(String apuntador){
@@ -77,9 +82,11 @@ public class eventoPulsado {
         eventoSignos(apuntador);
     }
     public void eventoPunto(String apuntador){
-        eventoSignos(apuntador);
+        if (punto) eventoSignos(apuntador);
     }
     public void eventoC(){
+
+        punto=true;
         cadenaRes="";
     }
 
@@ -90,12 +97,13 @@ public class eventoPulsado {
       //  String cadenaTemporal= operacion.operation(cadenaRes);
         String cadenaTemporal="";
         for (String evento: conjuntoEventosM){
-            System.out.printf(cadenaTemporal);
+            //System.out.printf(cadenaTemporal);
             cadenaTemporal+=evento;
         }
-        String resultadoM= operacion.operation(cadenaTemporal);
-        if (cadenaTemporal.isEmpty())  JOptionPane.showMessageDialog(null,"Datos mal implementados");
-        else JOptionPane.showMessageDialog(null,cadenaTemporal+"\nResultado="+resultadoM);
+        /*  if (cadenaTemporal.isEmpty())  JOptionPane.showMessageDialog(null,"Datos mal implementados");
+        else JOptionPane.showMessageDialog(null,cadenaTemporal+"\nResultado="+resultadoM);*/
+        cadenaRes= operacion.operation(cadenaTemporal);
+      //  conjuntoEventosM.clear();
     }
     public void eventoML(){
         if (eventosM(cadenaRes)) JOptionPane.showMessageDialog(null,operacion.factorial(cadenaRes));
@@ -123,7 +131,7 @@ public class eventoPulsado {
             if (conjuntoEventosM.isEmpty()) cadenaTemporal=operacion.operation(cadenaRes);
             else cadenaTemporal="+"+operacion.operation(cadenaRes);
 
-            System.out.printf(cadenaTemporal);
+           // System.out.printf(cadenaTemporal);
             conjuntoEventosM.add(cadenaTemporal);
         }
 
@@ -133,12 +141,13 @@ public class eventoPulsado {
         if (eventosM(apuntador)) {
 
             cadenaTemporal="-"+operacion.operation(cadenaRes);
-            System.out.printf(cadenaTemporal);
+           // System.out.printf(cadenaTemporal);
             conjuntoEventosM.add(cadenaTemporal);
         }
     }
     public void eventoIgual(){
         cadenaRes= operacion.operation(cadenaRes);
+      //  punto=true;
 
 
 
