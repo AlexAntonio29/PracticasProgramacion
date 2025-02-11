@@ -83,7 +83,7 @@ public class eventoPulsado
     
     private void EventoRaiz(string apuntador)
     {
-        if (!"+-x/.^".Contains(apuntador)) cadenaRes += "√";
+         cadenaRes += "√";
     }
     
     private void EventoMSuma(string apuntador)
