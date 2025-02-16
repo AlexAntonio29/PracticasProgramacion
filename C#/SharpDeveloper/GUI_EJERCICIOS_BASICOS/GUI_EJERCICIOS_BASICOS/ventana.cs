@@ -6,7 +6,10 @@
  * 
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
+
 using System;
+using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace GUI_EJERCICIOS_BASICOS
@@ -78,104 +81,108 @@ namespace GUI_EJERCICIOS_BASICOS
 			
 			
 		}
-		
-		public void ventanaGeneral(){
-			this.Size= new System.Drawing.Size(620,300);
-		
-		//AGREGAR LABEL A OBJETOS
-			this.Text=tituloString;
-			this.bResultado.Text="Resultado";
-			this.lbResultado.Text="0";
-			
-			this.lbTextContext.Text=Context1String;
-			this.lbTextContext2.Text=Context2String;
-			this.lbTextContext3.Text=Context3String;
-			this.lbTextContext4.Text=Context4String;
-			
-			this.rb1.Text=Context1String;
-			this.rb2.Text=Context2String;
-			
-			
-			
-			this.lbcontextoResultado.Text = lbcontextoResultadoString;
-			
-			
-			
-			
-			//MODIFICAR LABEL1
-			this.lbTextContext.AutoSize = true;
-			this.lbTextContext.Location = new System.Drawing.Point(10, 30);
-			this.lbTextContext.Margin = new Padding();
-			
-			//MODIFICA LABEL2
-			this.lbTextContext2.AutoSize = true;
-			this.lbTextContext2.Location = new System.Drawing.Point(10, lbTextContext.Bottom+30);
-			this.lbTextContext2.Margin = new Padding();
-			
-			
-			//MODIFICA LABEL3
-			this.lbTextContext3.AutoSize = true;
-			this.lbTextContext3.Location = new System.Drawing.Point(10, lbTextContext2.Bottom+30);
-			this.lbTextContext3.Margin = new Padding();
-			
-			//MODIFICA LABEL4
-			this.lbTextContext4.AutoSize = true;
-			this.lbTextContext4.Location = new System.Drawing.Point(10, lbTextContext3.Bottom+30);
-			this.lbTextContext4.Margin = new Padding();
-			
-			//MODIFICA TRACKLABEL
-			
-        cb1.Location = new System.Drawing.Point(lbTextContext.Right+30, 30);
-        //cb1.Width = 200;
-			
-			
-			//MODIFICAR  TEXT BOX
-			this.tbContext.AutoSize =true;
-			this.tbContext.Location= new System.Drawing.Point(lbTextContext.Right+30, 30);
-			
-			//MODIFICAR TEXT BOX 2
-			this.tbContext2.AutoSize =true;
-			this.tbContext2.Location= new System.Drawing.Point(lbTextContext.Right+30, tbContext.Bottom+30);
-			//MODIFICAR TEXT BOX 3
-			this.tbContext3.AutoSize =true;
-			this.tbContext3.Location= new System.Drawing.Point(lbTextContext.Right+30, tbContext2.Bottom+30);
-			//MODIFICAR TEXT BOX 4
-			this.tbContext4.AutoSize =true;
-			this.tbContext4.Location= new System.Drawing.Point(lbTextContext.Right+30, tbContext3.Bottom+30);
-			
-			
-			//MODIFICA RADIO BUTTON 1
-			this.rb1.AutoSize = true;
-			this.rb1.Location= new System.Drawing.Point(tbContext.Right+30, 30);
-			this.rb1.AutoSize=true;
-			
-			//MODIFICA RADIO BUTTON 2
-			this.rb2.AutoSize = true;
-			this.rb2.Location= new System.Drawing.Point(tbContext.Right+30, tbContext.Bottom+30);
-			this.rb2.AutoSize=true;
-			
-			//MODIFICA RADIO BUTTON 3
-			
-			
-			//MODIFICAR BUTTON
-			//this.bResultado.Location= new System.Drawing.Point(lbTextContext.Right-50, Bottom);
-			this.bResultado.AutoSize =true;
-			
-			this.bResultado.Dock = DockStyle.Bottom;
-			
-			//MODIFICAR LABEL RESULTADO CONTEXTO
-		
-			this.lbcontextoResultado.AutoSize=true;
-			this.lbcontextoResultado.Location= new System.Drawing.Point(lbTextContext.Right-50, tbContext4.Bottom+20);
-			
-			
-			//MODIFICAR LABEL RESULTADO
-			this.lbResultado.AutoSize= true;
-			this.lbResultado.Text=lbResultadoString;
-			this.lbResultado.Location= new System.Drawing.Point(lbTextContext.Right+40, tbContext4.Bottom+20);
-			
-		}
+	 public void ventanaGeneral()
+{
+    this.Size = new System.Drawing.Size(620, 300);
+    
+    // Configuración de estilos
+    this.BackColor = Color.FromArgb(30, 144, 255); // DodgerBlue
 
+    this.FormBorderStyle = FormBorderStyle.FixedDialog;
+    this.StartPosition = FormStartPosition.CenterScreen;
+  //  this.Icon = new Icon("iconoEscuela.ico"); // Agregar icono personalizado si es necesario
+
+    // AGREGAR LABEL A OBJETOS
+    this.Text = tituloString;
+    this.bResultado.Text = "Resultado";
+    this.bResultado.BackColor = Color.FromArgb(0, 123, 255);
+    this.bResultado.ForeColor = Color.White;
+    this.bResultado.FlatStyle = FlatStyle.Flat;
+    this.bResultado.Font = new Font("Arial", 12, FontStyle.Bold);
+
+    this.lbResultado.Text = "0";
+    this.lbResultado.Font = new Font("Arial", 10, FontStyle.Regular);
+    
+    this.lbTextContext.Text = Context1String;
+    this.lbTextContext.Font = new Font("Arial", 10, FontStyle.Regular);
+    this.lbTextContext2.Text = Context2String;
+    this.lbTextContext2.Font = new Font("Arial", 10, FontStyle.Regular);
+    this.lbTextContext3.Text = Context3String;
+    this.lbTextContext3.Font = new Font("Arial", 10, FontStyle.Regular);
+    this.lbTextContext4.Text = Context4String;
+    this.lbTextContext4.Font = new Font("Arial", 10, FontStyle.Regular);
+    
+    this.rb1.Text = Context1String;
+    this.rb1.Font = new Font("Arial", 10, FontStyle.Regular);
+    this.rb2.Text = Context2String;
+    this.rb2.Font = new Font("Arial", 10, FontStyle.Regular);
+    
+    this.lbcontextoResultado.Text = lbcontextoResultadoString;
+    this.lbcontextoResultado.Font = new Font("Arial", 10, FontStyle.Regular);
+
+    // MODIFICAR LABEL1
+    this.lbTextContext.AutoSize = true;
+    this.lbTextContext.Location = new System.Drawing.Point(10, 30);
+    
+    // MODIFICA LABEL2
+    this.lbTextContext2.AutoSize = true;
+    this.lbTextContext2.Location = new System.Drawing.Point(10, lbTextContext.Bottom + 30);
+    
+    // MODIFICA LABEL3
+    this.lbTextContext3.AutoSize = true;
+    this.lbTextContext3.Location = new System.Drawing.Point(10, lbTextContext2.Bottom + 30);
+    
+    // MODIFICA LABEL4
+    this.lbTextContext4.AutoSize = true;
+    this.lbTextContext4.Location = new System.Drawing.Point(10, lbTextContext3.Bottom + 30);
+    
+    // MODIFICA TRACKLABEL
+    cb1.Location = new System.Drawing.Point(lbTextContext.Right + 30, 30);
+    
+    // MODIFICAR TEXT BOX
+    this.tbContext.AutoSize = true;
+    this.tbContext.Location = new System.Drawing.Point(lbTextContext.Right + 30, 30);
+    this.tbContext.BorderStyle = BorderStyle.FixedSingle;
+    
+    // MODIFICAR TEXT BOX 2
+    this.tbContext2.AutoSize = true;
+    this.tbContext2.Location = new System.Drawing.Point(lbTextContext.Right + 30, tbContext.Bottom + 30);
+    this.tbContext2.BorderStyle = BorderStyle.FixedSingle;
+    
+    // MODIFICAR TEXT BOX 3
+    this.tbContext3.AutoSize = true;
+    this.tbContext3.Location = new System.Drawing.Point(lbTextContext.Right + 30, tbContext2.Bottom + 30);
+    this.tbContext3.BorderStyle = BorderStyle.FixedSingle;
+    
+    // MODIFICAR TEXT BOX 4
+    this.tbContext4.AutoSize = true;
+    this.tbContext4.Location = new System.Drawing.Point(lbTextContext.Right + 30, tbContext3.Bottom + 30);
+    this.tbContext4.BorderStyle = BorderStyle.FixedSingle;
+    
+    // MODIFICA RADIO BUTTON 1
+    this.rb1.AutoSize = true;
+    this.rb1.Location = new System.Drawing.Point(tbContext.Right + 30, 30);
+    
+    // MODIFICA RADIO BUTTON 2
+    this.rb2.AutoSize = true;
+    this.rb2.Location = new System.Drawing.Point(tbContext.Right + 30, tbContext.Bottom + 30);
+    
+    // MODIFICA RADIO BUTTON 3
+    
+    // MODIFICAR BUTTON
+    this.bResultado.AutoSize = true;
+    this.bResultado.Dock = DockStyle.Bottom;
+    
+    // MODIFICAR LABEL RESULTADO CONTEXTO
+    this.lbcontextoResultado.AutoSize = true;
+    this.lbcontextoResultado.Location = new System.Drawing.Point(lbTextContext.Right - 50, tbContext4.Bottom + 20);
+    
+    // MODIFICAR LABEL RESULTADO
+    this.lbResultado.AutoSize = true;
+    this.lbResultado.Text = lbResultadoString;
+    this.lbResultado.Location = new System.Drawing.Point(lbTextContext.Right + 40, tbContext4.Bottom + 20);
+}  
+		
 		
 		public void areaCirculo(){
 			

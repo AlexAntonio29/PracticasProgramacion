@@ -1,4 +1,4 @@
-﻿/*
+﻿/*este es mi codigo no modifiques las estructura solo dale ese diseño inigualable /*
  * Created by SharpDevelop.
  * User: Alexis
  * Date: 11/02/2025
@@ -48,7 +48,20 @@ namespace GUI_EJERCICIOS_BASICOS
 		
 		void MainFormLoad(object sender, EventArgs e)
 		{
-			this.Size= new System.Drawing.Size(950,450);
+			this.WindowState = FormWindowState.Maximized; // Maximiza la ventana
+    this.FormBorderStyle = FormBorderStyle.None; // Elimina bordes y barra de título
+    
+          this.BackColor = Color.FromArgb(30, 144, 255);
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.StartPosition = FormStartPosition.CenterScreen;
+
+            // Estilo del MenuStrip
+            menuStrip1.BackColor = Color.FromArgb(14, 5, 213);
+            menuStrip1.ForeColor = Color.White;
+            menuStrip1.RenderMode = ToolStripRenderMode.Professional;
+            menuStrip1.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+
+            
 		}
 		
 		void EjercicioEmpresaToolStripMenuItemClick(object sender, EventArgs e)
