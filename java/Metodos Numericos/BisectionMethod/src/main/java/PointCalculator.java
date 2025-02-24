@@ -1,43 +1,33 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import javax.swing.border.EmptyBorder;
-import org.mariuszgromada.math.mxparser.Expression;
 
-public class BisectionCalculator extends JDialog {
-    private JTextField functionField, aField, bField, toleranceField;
+public class PointCalculator extends JDialog {
+    private JTextField functionField, initialGuessField, toleranceField;
     private JTextArea resultArea, stepsArea;
 
-    public BisectionCalculator(JFrame parent) {
-        super(parent, "Calculadora Método de Bisección", true);
+    public PointCalculator(JFrame parent) {
+        super(parent, "Calculadora Método de Punto Fijo", true);
         setSize(800, 600);
         setLayout(new BorderLayout());
-        setLocationRelativeTo(parent);
 
         // Panel principal
         JPanel mainPanel = new JPanel();
-        mainPanel.setLayout(new GridLayout(5, 2, 10, 10));
+        mainPanel.setLayout(new GridLayout(4, 2, 10, 10));
         mainPanel.setBorder(new EmptyBorder(20, 20, 20, 20));
         mainPanel.setBackground(new Color(60, 63, 65));
 
-        JLabel functionLabel = new JLabel("Función (ej: x*x - 4):");
+        JLabel functionLabel = new JLabel("Función g(x):");
         functionLabel.setForeground(Color.WHITE);
         mainPanel.add(functionLabel);
         functionField = new JTextField();
         mainPanel.add(functionField);
 
-        JLabel aLabel = new JLabel("Límite inferior (a):");
-        aLabel.setForeground(Color.WHITE);
-        mainPanel.add(aLabel);
-        aField = new JTextField();
-        mainPanel.add(aField);
-
-        JLabel bLabel = new JLabel("Límite superior (b):");
-        bLabel.setForeground(Color.WHITE);
-        mainPanel.add(bLabel);
-        bField = new JTextField();
-        mainPanel.add(bField);
+        JLabel initialGuessLabel = new JLabel("Valor inicial x0:");
+        initialGuessLabel.setForeground(Color.WHITE);
+        mainPanel.add(initialGuessLabel);
+        initialGuessField = new JTextField();
+        mainPanel.add(initialGuessField);
 
         JLabel toleranceLabel = new JLabel("Tolerancia:");
         toleranceLabel.setForeground(Color.WHITE);
@@ -56,6 +46,7 @@ public class BisectionCalculator extends JDialog {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 calculateButton.setBackground(new Color(0, 123, 56));
             }
+
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 calculateButton.setBackground(new Color(0, 153, 76));
             }
@@ -76,40 +67,8 @@ public class BisectionCalculator extends JDialog {
         // Crear un JSplitPane para dividir la ventana en dos partes
         JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, new JScrollPane(resultArea), new JScrollPane(stepsArea));
         splitPane.setResizeWeight(0.5); // Dividir igualmente las dos partes
+
         add(mainPanel, BorderLayout.NORTH);
         add(splitPane, BorderLayout.CENTER);
-
-        calculateButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                new Thread(() -> calculateBisection()).start();
-            }
-        });
-    }
-
-    private void calculateBisection() {
-        try {
-            String function = functionField.getText();
-            double a = Double.parseDouble(aField.getText());
-            double b = Double.parseDouble(bField.getText());
-            double tolerance = Double.parseDouble(toleranceField.getText());
-
-            BisectionMethod solver = new BisectionMethod(function, tolerance);
-            solver.setOnStepListener(step -> SwingUtilities.invokeLater(() -> stepsArea.setText(step)));
-
-            double root = solver.solve(a, b);
-
-            SwingUtilities.invokeLater(() -> resultArea.setText("Raíz aproximada: " + root));
-        } catch (Exception ex) {
-            SwingUtilities.invokeLater(() -> resultArea.setText("Error: " + ex.getMessage()));
-        }
-    }
-
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            JFrame frame = new JFrame();
-            BisectionCalculator dialog = new BisectionCalculator(frame);
-            dialog.setVisible(true);
-        });
     }
 }
