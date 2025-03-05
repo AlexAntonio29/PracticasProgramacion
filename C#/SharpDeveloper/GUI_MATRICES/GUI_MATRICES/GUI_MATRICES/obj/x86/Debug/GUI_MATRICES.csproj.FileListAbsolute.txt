@@ -1,0 +1,7 @@
+U:\Documents\GitHub\Cuentas\AlexAntonio29\PRACTICAS-PROGRAMACION\C#\SharpDeveloper\GUI_MATRICES\GUI_MATRICES\GUI_MATRICES\bin\Debug\GUI_MATRICES.exe
+U:\Documents\GitHub\Cuentas\AlexAntonio29\PRACTICAS-PROGRAMACION\C#\SharpDeveloper\GUI_MATRICES\GUI_MATRICES\GUI_MATRICES\bin\Debug\GUI_MATRICES.pdb
+U:\Documents\GitHub\Cuentas\AlexAntonio29\PRACTICAS-PROGRAMACION\C#\SharpDeveloper\GUI_MATRICES\GUI_MATRICES\GUI_MATRICES\obj\x86\Debug\GUI_MATRICES.csprojResolveAssemblyReference.cache
+U:\Documents\GitHub\Cuentas\AlexAntonio29\PRACTICAS-PROGRAMACION\C#\SharpDeveloper\GUI_MATRICES\GUI_MATRICES\GUI_MATRICES\obj\x86\Debug\GUI_MATRICES.MainForm.resources
+U:\Documents\GitHub\Cuentas\AlexAntonio29\PRACTICAS-PROGRAMACION\C#\SharpDeveloper\GUI_MATRICES\GUI_MATRICES\GUI_MATRICES\obj\x86\Debug\GUI_MATRICES.csproj.GenerateResource.Cache
+U:\Documents\GitHub\Cuentas\AlexAntonio29\PRACTICAS-PROGRAMACION\C#\SharpDeveloper\GUI_MATRICES\GUI_MATRICES\GUI_MATRICES\obj\x86\Debug\GUI_MATRICES.exe
+U:\Documents\GitHub\Cuentas\AlexAntonio29\PRACTICAS-PROGRAMACION\C#\SharpDeveloper\GUI_MATRICES\GUI_MATRICES\GUI_MATRICES\obj\x86\Debug\GUI_MATRICES.pdb
