@@ -1,0 +1,7 @@
+U:\Documents\SharpDevelop Projects\CONEXION_BD\CONEXION_BD\obj\x86\Debug\CONEXION_BD.csprojResolveAssemblyReference.cache
+U:\Documents\SharpDevelop Projects\CONEXION_BD\CONEXION_BD\obj\x86\Debug\CONEXION_BD.MainForm.resources
+U:\Documents\SharpDevelop Projects\CONEXION_BD\CONEXION_BD\obj\x86\Debug\CONEXION_BD.csproj.GenerateResource.Cache
+U:\Documents\SharpDevelop Projects\CONEXION_BD\CONEXION_BD\bin\Debug\CONEXION_BD.exe
+U:\Documents\SharpDevelop Projects\CONEXION_BD\CONEXION_BD\bin\Debug\CONEXION_BD.pdb
+U:\Documents\SharpDevelop Projects\CONEXION_BD\CONEXION_BD\obj\x86\Debug\CONEXION_BD.exe
+U:\Documents\SharpDevelop Projects\CONEXION_BD\CONEXION_BD\obj\x86\Debug\CONEXION_BD.pdb

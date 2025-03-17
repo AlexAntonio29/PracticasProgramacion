@@ -1,0 +1,38 @@
+﻿/*
+ * Creado por SharpDevelop.
+ * Usuario: Alexis
+ * Fecha: 07/03/2025
+ * Hora: 08:40 a. m.
+ * 
+ * Para cambiar esta plantilla use Herramientas | Opciones | Codificación | Editar Encabezados Estándar
+ */
+using System;
+using System.Windows.Forms;
+
+
+namespace CONEXION_BD
+{
+	/// <summary>
+	/// Description of GuardarAlumno.
+	/// </summary>
+	class Advertencia: Form
+	{
+		
+		public Advertencia(){
+		
+		}
+		
+		public void start(String text){
+		this.Text= text;
+		
+		Label labelText= new Label();
+		
+		labelText.Text= text;
+		this.Controls.Add(labelText);
+			
+			//this.Visible(true);
+			this.ShowDialog();
+		}
+
+	}
+}
