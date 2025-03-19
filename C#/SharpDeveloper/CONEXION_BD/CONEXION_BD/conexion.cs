@@ -53,12 +53,10 @@ namespace CONEXION_BD
 				return true;
 			}
 			catch(Exception e){
-				Console.WriteLine("ERROR CONEXION "
-				                +e);
+				
 				ventana.start("ERROR startConexion: "+e);
 				return false;
-		}
-			
+			}
 			return false;
 		}
 		
@@ -137,6 +135,19 @@ namespace CONEXION_BD
                  	contador++;
                  }
                  		break;
+                 		case 3://HORARIOS
+                 		while(lectorCmd.Read()){
+                 	tabla.Rows.Add();
+                 	tabla.Rows[contador].Cells[0].Value=lectorCmd["id_horario"];
+                 	tabla.Rows[contador].Cells[1].Value=lectorCmd["id_alumno"];
+                 	tabla.Rows[contador].Cells[2].Value=lectorCmd["id_maestro"];
+                 	tabla.Rows[contador].Cells[3].Value=lectorCmd["id_materia"];
+                 	tabla.Rows[contador].Cells[4].Value=lectorCmd["hora_inicio"];
+                 	tabla.Rows[contador].Cells[4].Value=lectorCmd["hora_salida"];
+                 	tabla.Rows[contador].Cells[6].Value=lectorCmd["dia"];
+                 	contador++;
+                 }
+                 		break;
                  		
                  		
                  		
@@ -156,9 +167,10 @@ namespace CONEXION_BD
 		public void deleteData(DataGridView tabla, string id){//con el id se identifica la fila a eliminar
 		
 			try{
+				string query="";
+				if(tipoTabla()==3) query="DELETE FROM "+nameTabla+" WHERE id_horario= "+id+";";
+				else  query="DELETE FROM "+nameTabla+" WHERE id= "+id+";";
 				
-				
-				string query="DELETE FROM "+nameTabla+" WHERE id= "+id+";";
 		
 		MySqlCommand cmd= new MySqlCommand(query,conection);
 		MySqlDataReader lectorCmd= cmd.ExecuteReader();
@@ -183,16 +195,21 @@ namespace CONEXION_BD
 				string query="UPDATE "+nameTabla+"";
 				
 				if(tipoTabla()==2) query+="SET nombre="+nombre;
+				else if(tipoTabla()==3) query+=" SET id_alumno="+nombre+", id_maestro="+apellidoPaterno+", id_materia="+apellidoMaterno+
+						", hora_inicio="+ calle+", hora_salida="+ fechaNacimiento+", dia="+ telefono;
+					
+					
 					else query+=" SET nombre="+nombre+", Apellido_Paterno="+apellidoPaterno+", Apellido_Materno="+apellidoMaterno+
 						", Calle="+ calle+", Fecha_Nacimiento="+ fechaNacimiento+", Telefono="+telefono;
 					
-				query+=" WHERE id="+id+";";
+				if(tipoTabla()==3) query+=" WHERE id_horario="+id+";";
+					else query+=" WHERE id="+id+";";
 		MySqlCommand cmd= new MySqlCommand(query,conection);
 		MySqlDataReader lectorCmd= cmd.ExecuteReader();
 		lectorCmd.Close();
 		updateTabla(tabla);
 			}catch(Exception e){
-				ventana.start("ERROR ModifiquedData "+e);
+				ventana.start("DATOS MAL IMPLEMENTADOS");
 			}
 	}
 	
@@ -200,15 +217,21 @@ namespace CONEXION_BD
 		                   , string apellidoMaterno="", string calle="", string fechaNacimiento="", string telefono=""){
 		
 		try{
+				string query="";
 				
+				if(tipoTabla()==3) {
+					query+="INSERT INTO "+nameTabla+"(id_alumno,id_maestro, id_materia, hora_inicio,hora_salida, dia) " +
+					"VALUES ("+nombre+","+apellidoPaterno+","+apellidoMaterno+","+calle+","+fechaNacimiento+","+telefono+");";
+				}
+				else{
 				
-				string query="INSERT INTO "+nameTabla+" ";
+				query+="INSERT INTO "+nameTabla+" ";
 				
 				if(tipoTabla()==2) query+="(id, nombre) " +
 					"VALUES ("+id+","+nombre+");";
 				else query+="(id, nombre, Apellido_Paterno, Apellido_Materno, Calle, Fecha_Nacimiento, Telefono) " +
 					"VALUES ("+id+","+nombre+","+apellidoPaterno+","+apellidoMaterno+","+calle+","+fechaNacimiento+","+telefono+");";
-		
+				}
 		MySqlCommand cmd= new MySqlCommand(query,conection);
 		MySqlDataReader lectorCmd= cmd.ExecuteReader();
 		
@@ -216,9 +239,59 @@ namespace CONEXION_BD
 		updateTabla(tabla);
 		
 			}catch(Exception e){
-				ventana.start("ERROR addData "+e);
+				ventana.start("DATOS MAL IMPLEMENTADOS O NO RELLENADOS");
+				
+				
 			}
+			
 	}
+		
+		public string consultarData(string id, string nombre, string apellidoPaterno=""
+		                   , string apellidoMaterno="", string calle="", string fechaNacimiento="", string telefono=""){
+			string query="SELECT ";
+			
+			try{
+				if(tipoTabla()==2) query+="id, nombre FROM '"+nameTabla+"' WHERE id ="+id;
+				else if(tipoTabla()==3){ query+="id_horario, id_alumno, id_maestro, id_materia, hora_inicio, hora_salida, dia FROM "+nameTabla+" WHERE id_horario ="+id.ToString();
+				}
+				
+				else query+="id, nombre, Apellido_Paterno, Apellido_Materno, Calle, Fecha_Nacimiento, Telefono FROM "+nameTabla+" WHERE id ="+id.ToString();
+				
+				cmd= new MySqlCommand(query,conection);
+				using (MySqlDataReader read= cmd.ExecuteReader())
+				{
+					if(read.Read()){
+						
+						if(nombre=="") 
+							return nombre=read["nombre"].ToString();
+						if(apellidoPaterno=="")
+							return apellidoPaterno=read["Apellido_Paterno"].ToString();
+						if(apellidoMaterno=="")
+							return apellidoMaterno=read["Apellido_Materno"].ToString();
+						if(calle=="")
+							return calle=read["Calle"].ToString();
+						if(fechaNacimiento=="")
+							return fechaNacimiento = read.GetDateTime(read.GetOrdinal("Fecha_Nacimiento")).ToString("yyyy-MM-dd");
+
+						if(telefono=="")
+							return telefono=read["Telefono"].ToString();
+						
+						
+					}
+				}
+				
+		
+	
+                  
+                
+			}catch(Exception e){
+				
+				ventana.start("NO SE HA ASIGNADO EL ID");
+			}
+                return ""; 
+                
+		}
+		
 		
 		//metodos secundarios
 	
@@ -226,6 +299,7 @@ namespace CONEXION_BD
 		if(nameTabla=="alumnos")return 0;
 		if(nameTabla=="maestros") return 1;
 		if(nameTabla=="materia") return 2;
+		if(nameTabla=="horarios") return 3;
 		return 3;
 	}
 		

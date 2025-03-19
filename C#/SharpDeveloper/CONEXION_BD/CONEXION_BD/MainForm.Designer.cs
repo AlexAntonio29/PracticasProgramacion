@@ -60,6 +60,7 @@ namespace CONEXION_BD
 			this.lbdia = new System.Windows.Forms.Label();
 			this.lbMes = new System.Windows.Forms.Label();
 			this.lbAno = new System.Windows.Forms.Label();
+			this.label1 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -217,10 +218,11 @@ namespace CONEXION_BD
 			this.cbNombre.Items.AddRange(new object[] {
 									"alumnos",
 									"maestros",
-									"materia"});
-			this.cbNombre.Location = new System.Drawing.Point(592, 25);
+									"materia",
+									"horarios"});
+			this.cbNombre.Location = new System.Drawing.Point(567, 40);
 			this.cbNombre.Name = "cbNombre";
-			this.cbNombre.Size = new System.Drawing.Size(121, 28);
+			this.cbNombre.Size = new System.Drawing.Size(146, 28);
 			this.cbNombre.TabIndex = 20;
 			this.cbNombre.Tag = "alumnos";
 			this.cbNombre.SelectedIndexChanged += new System.EventHandler(this.CbNombreSelectedIndexChanged);
@@ -263,11 +265,20 @@ namespace CONEXION_BD
 			this.lbAno.TabIndex = 25;
 			this.lbAno.Text = "Año";
 			// 
+			// label1
+			// 
+			this.label1.Location = new System.Drawing.Point(567, 14);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(146, 23);
+			this.label1.TabIndex = 26;
+			this.label1.Text = "Seleccionar Tabla:";
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(984, 388);
+			this.Controls.Add(this.label1);
 			this.Controls.Add(this.lbAno);
 			this.Controls.Add(this.lbMes);
 			this.Controls.Add(this.lbdia);
@@ -299,6 +310,7 @@ namespace CONEXION_BD
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.TextBox tbDia;
 		private System.Windows.Forms.Label lbAno;
 		private System.Windows.Forms.Label lbMes;

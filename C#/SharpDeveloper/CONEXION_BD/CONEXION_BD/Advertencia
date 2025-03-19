@@ -23,15 +23,20 @@ namespace CONEXION_BD
 		}
 		
 		public void start(String text){
+		this.Width=500;
+		this.Height=200;
+		
 		this.Text= text;
 		
 		Label labelText= new Label();
+		labelText.AutoSize = true;
 		
 		labelText.Text= text;
 		this.Controls.Add(labelText);
 			
 			//this.Visible(true);
 			this.ShowDialog();
+			labelText.Text= "";
 		}
 
 	}

@@ -19,6 +19,8 @@ namespace CONEXION_BD
 	public partial class MainForm : Form
 		
 	{
+		//INICIAR BD DE ESTE TRABAJO DESDE TERMINAL 
+//C:\Program Files\MySQL\MySQL Server 9.2\bin>mysql -u root -p --port=3307 IMPORTANTE PARA SABER COMO ESTA ACTUANDO LA BD
 		
 		public string Table="alumnos";
 		public conexion conect;
@@ -73,6 +75,7 @@ namespace CONEXION_BD
 		void BAgregarClick(object sender, EventArgs e)
 		{
 			
+			
 		string id=tbId.Text, nombre= tbNombre.Text, paterno= tbPaterno.Text, materno=tbMaterno.Text,
 		fNacimiento= tbAno.Text+"-"+tbMes.Text+"-"+tbDia.Text, calle=tbCalle.Text, telefono=tbTelefono.Text ;
 		
@@ -94,10 +97,26 @@ namespace CONEXION_BD
 		{
 			string id=tbId.Text, nombre= tbNombre.Text, paterno= tbPaterno.Text, materno=tbMaterno.Text,
 		fNacimiento=  tbAno.Text+"-"+tbMes.Text+"-"+tbDia.Text, calle=tbCalle.Text, telefono=tbTelefono.Text ;
+		if(fNacimiento=="--")fNacimiento="";
+		if(conect.tipoTabla()==3){fNacimiento=tbDia.Text; id="1";}
 		
+		//conect.consultarData(id, nombre, paterno,materno,fNacimiento,calle,telefono);
 		
-		
-		
+		if(conect.tipoTabla()==2) {  if(nombre=="") nombre=conect.consultarData(id, nombre, paterno,materno,calle,fNacimiento,telefono); }
+		else {
+						if(nombre=="") 
+							nombre=conect.consultarData(id, nombre, paterno,materno,calle,fNacimiento,telefono);
+						if(paterno=="")
+							paterno=conect.consultarData(id, nombre, paterno,materno,calle,fNacimiento,telefono);
+						if(materno=="") 
+							materno=conect.consultarData(id, nombre, paterno,materno,calle,fNacimiento,telefono);
+						if(calle=="")
+							calle=conect.consultarData(id, nombre, paterno,materno,calle,fNacimiento,telefono);
+						if(fNacimiento=="")
+							fNacimiento=conect.consultarData(id, nombre, paterno,materno,calle,fNacimiento,telefono);
+						if(telefono=="") 
+							telefono=conect.consultarData(id, nombre, paterno,materno,calle,fNacimiento,telefono);
+		}
 		
 		conect.updateData(dataGridView1,id,"'"+nombre+"'","'"+ paterno+"'","'"+materno+"'","'"+ calle+"'","'"+fNacimiento+"'", telefono);
 		
@@ -145,21 +164,30 @@ namespace CONEXION_BD
 			switch(conect.tipoTabla()){
 					
 					case 0: 
+					lbTelefono.Text="Telefono";
 					lbTelefono.Visible=true;
 					tbTelefono.Visible=true;
 					
+					lbApMaterno.Text="Apellido Paterno:";
 					lbApPaterno.Visible=true;
 					tbPaterno.Visible=true;
 					
+					lbApMaterno.Text="Apellido Materno:";
 					lbApMaterno.Visible=true;
 					tbMaterno.Visible=true;
 					
+					lbCalle.Text="Calle: ";
 					lbCalle.Visible=true;
 					tbCalle.Visible=true;
 					
+					lbNacimiento.Text="F.Nacimiento";
 					lbNacimiento.Visible=true;
+					
+					
 					lbdia.Visible=true;
 					tbDia.Visible=true;
+					tbDia.Width=30;
+					
 					
 					lbMes.Visible=true;
 					tbMes.Visible=true;
@@ -193,6 +221,8 @@ namespace CONEXION_BD
 					
 					break;
 					case 2: 
+					
+					
 					lbTelefono.Visible=false;
 					tbTelefono.Visible=false;
 					
@@ -215,6 +245,35 @@ namespace CONEXION_BD
 					lbAno.Visible=false;
 					tbAno.Visible=false;
 					break;
+					case 3: 
+					lbTelefono.Visible=true;
+					tbTelefono.Visible=true;
+					
+					lbApPaterno.Visible=true;
+					tbPaterno.Visible=true;
+					
+					lbApMaterno.Visible=true;
+					tbMaterno.Visible=true;
+					
+					lbCalle.Visible=true;
+					tbCalle.Visible=true;
+					
+					lbNacimiento.Visible=true;
+					lbdia.Visible=true;
+					tbDia.Visible=true;
+					
+					lbMes.Visible=true;
+					tbMes.Visible=true;
+					
+					lbAno.Visible=true;
+					tbAno.Visible=true;
+					
+					
+					
+					break;
+					
+					
+					
 			}
 			
 		}
