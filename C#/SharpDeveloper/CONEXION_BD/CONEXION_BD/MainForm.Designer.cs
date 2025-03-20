@@ -61,6 +61,12 @@ namespace CONEXION_BD
 			this.lbMes = new System.Windows.Forms.Label();
 			this.lbAno = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
+			this.cbIdAlumno = new System.Windows.Forms.ComboBox();
+			this.cbDia = new System.Windows.Forms.ComboBox();
+			this.cbIdMaestro = new System.Windows.Forms.ComboBox();
+			this.cbIdMateria = new System.Windows.Forms.ComboBox();
+			this.cbHoraInicio = new System.Windows.Forms.ComboBox();
+			this.lbHoraSalida = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -137,14 +143,14 @@ namespace CONEXION_BD
 			// 
 			// tbDia
 			// 
-			this.tbDia.Location = new System.Drawing.Point(829, 280);
+			this.tbDia.Location = new System.Drawing.Point(829, 335);
 			this.tbDia.Name = "tbDia";
 			this.tbDia.Size = new System.Drawing.Size(40, 26);
 			this.tbDia.TabIndex = 11;
 			// 
 			// lbNacimiento
 			// 
-			this.lbNacimiento.Location = new System.Drawing.Point(676, 283);
+			this.lbNacimiento.Location = new System.Drawing.Point(676, 338);
 			this.lbNacimiento.Name = "lbNacimiento";
 			this.lbNacimiento.Size = new System.Drawing.Size(132, 23);
 			this.lbNacimiento.TabIndex = 10;
@@ -182,18 +188,19 @@ namespace CONEXION_BD
 			// 
 			// tbCalle
 			// 
-			this.tbCalle.Location = new System.Drawing.Point(829, 332);
+			this.tbCalle.Location = new System.Drawing.Point(829, 277);
 			this.tbCalle.Name = "tbCalle";
 			this.tbCalle.Size = new System.Drawing.Size(91, 26);
 			this.tbCalle.TabIndex = 19;
 			// 
 			// lbCalle
 			// 
-			this.lbCalle.Location = new System.Drawing.Point(676, 335);
+			this.lbCalle.Location = new System.Drawing.Point(676, 280);
 			this.lbCalle.Name = "lbCalle";
-			this.lbCalle.Size = new System.Drawing.Size(90, 23);
+			this.lbCalle.Size = new System.Drawing.Size(132, 23);
 			this.lbCalle.TabIndex = 18;
 			this.lbCalle.Text = "Calle";
+			this.lbCalle.Click += new System.EventHandler(this.LbCalleClick);
 			// 
 			// tbTelefono
 			// 
@@ -229,21 +236,21 @@ namespace CONEXION_BD
 			// 
 			// tbAno
 			// 
-			this.tbAno.Location = new System.Drawing.Point(932, 280);
+			this.tbAno.Location = new System.Drawing.Point(932, 335);
 			this.tbAno.Name = "tbAno";
 			this.tbAno.Size = new System.Drawing.Size(40, 26);
 			this.tbAno.TabIndex = 21;
 			// 
 			// tbMes
 			// 
-			this.tbMes.Location = new System.Drawing.Point(880, 280);
+			this.tbMes.Location = new System.Drawing.Point(880, 335);
 			this.tbMes.Name = "tbMes";
 			this.tbMes.Size = new System.Drawing.Size(40, 26);
 			this.tbMes.TabIndex = 22;
 			// 
 			// lbdia
 			// 
-			this.lbdia.Location = new System.Drawing.Point(829, 254);
+			this.lbdia.Location = new System.Drawing.Point(829, 309);
 			this.lbdia.Name = "lbdia";
 			this.lbdia.Size = new System.Drawing.Size(37, 23);
 			this.lbdia.TabIndex = 23;
@@ -251,7 +258,7 @@ namespace CONEXION_BD
 			// 
 			// lbMes
 			// 
-			this.lbMes.Location = new System.Drawing.Point(880, 254);
+			this.lbMes.Location = new System.Drawing.Point(880, 309);
 			this.lbMes.Name = "lbMes";
 			this.lbMes.Size = new System.Drawing.Size(40, 23);
 			this.lbMes.TabIndex = 24;
@@ -259,7 +266,7 @@ namespace CONEXION_BD
 			// 
 			// lbAno
 			// 
-			this.lbAno.Location = new System.Drawing.Point(935, 254);
+			this.lbAno.Location = new System.Drawing.Point(935, 309);
 			this.lbAno.Name = "lbAno";
 			this.lbAno.Size = new System.Drawing.Size(49, 23);
 			this.lbAno.TabIndex = 25;
@@ -273,11 +280,113 @@ namespace CONEXION_BD
 			this.label1.TabIndex = 26;
 			this.label1.Text = "Seleccionar Tabla:";
 			// 
+			// cbIdAlumno
+			// 
+			this.cbIdAlumno.FormattingEnabled = true;
+			this.cbIdAlumno.Location = new System.Drawing.Point(200, 277);
+			this.cbIdAlumno.Name = "cbIdAlumno";
+			this.cbIdAlumno.Size = new System.Drawing.Size(121, 28);
+			this.cbIdAlumno.TabIndex = 27;
+			// 
+			// cbDia
+			// 
+			this.cbDia.AutoCompleteCustomSource.AddRange(new string[] {
+									"Lunes",
+									"Martes",
+									"Miercoles",
+									"Jueves",
+									"Viernes"});
+			this.cbDia.FormattingEnabled = true;
+			this.cbDia.Items.AddRange(new object[] {
+									"Lunes",
+									"Martes",
+									"Miercoles",
+									"Jueves",
+									"Viernes"});
+			this.cbDia.Location = new System.Drawing.Point(200, 335);
+			this.cbDia.Name = "cbDia";
+			this.cbDia.Size = new System.Drawing.Size(121, 28);
+			this.cbDia.TabIndex = 28;
+			// 
+			// cbIdMaestro
+			// 
+			this.cbIdMaestro.AutoCompleteCustomSource.AddRange(new string[] {
+									"Lunes",
+									"Martes",
+									"Miercoles",
+									"Jueves",
+									"Viernes"});
+			this.cbIdMaestro.FormattingEnabled = true;
+			this.cbIdMaestro.Location = new System.Drawing.Point(494, 281);
+			this.cbIdMaestro.Name = "cbIdMaestro";
+			this.cbIdMaestro.Size = new System.Drawing.Size(121, 28);
+			this.cbIdMaestro.TabIndex = 29;
+			// 
+			// cbIdMateria
+			// 
+			this.cbIdMateria.AutoCompleteCustomSource.AddRange(new string[] {
+									"Lunes",
+									"Martes",
+									"Miercoles",
+									"Jueves",
+									"Viernes"});
+			this.cbIdMateria.FormattingEnabled = true;
+			this.cbIdMateria.Location = new System.Drawing.Point(494, 332);
+			this.cbIdMateria.Name = "cbIdMateria";
+			this.cbIdMateria.Size = new System.Drawing.Size(121, 28);
+			this.cbIdMateria.TabIndex = 30;
+			// 
+			// cbHoraInicio
+			// 
+			this.cbHoraInicio.AutoCompleteCustomSource.AddRange(new string[] {
+									"Lunes",
+									"Martes",
+									"Miercoles",
+									"Jueves",
+									"Viernes"});
+			this.cbHoraInicio.FormattingEnabled = true;
+			this.cbHoraInicio.Items.AddRange(new object[] {
+									"07:00:00",
+									"08:00:00",
+									"09:00:00",
+									"10:00:00",
+									"11:00:00",
+									"12:00:00",
+									"13:00:00",
+									"14:00:00",
+									"15:00:00",
+									"16:00:00",
+									"17:00:00",
+									"18:00:00",
+									"19:00:00",
+									"20:00:00",
+									"21:00:00",
+									"22:00:00"});
+			this.cbHoraInicio.Location = new System.Drawing.Point(829, 275);
+			this.cbHoraInicio.Name = "cbHoraInicio";
+			this.cbHoraInicio.Size = new System.Drawing.Size(121, 28);
+			this.cbHoraInicio.TabIndex = 31;
+			this.cbHoraInicio.SelectedIndexChanged += new System.EventHandler(this.CbHoraInicioSelectedIndexChanged);
+			// 
+			// lbHoraSalida
+			// 
+			this.lbHoraSalida.Location = new System.Drawing.Point(829, 335);
+			this.lbHoraSalida.Name = "lbHoraSalida";
+			this.lbHoraSalida.Size = new System.Drawing.Size(143, 28);
+			this.lbHoraSalida.TabIndex = 32;
+			this.lbHoraSalida.Text = "label2";
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(984, 388);
+			this.Controls.Add(this.lbHoraSalida);
+			this.Controls.Add(this.cbHoraInicio);
+			this.Controls.Add(this.cbIdMateria);
+			this.Controls.Add(this.cbIdMaestro);
+			this.Controls.Add(this.cbDia);
+			this.Controls.Add(this.cbIdAlumno);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.lbAno);
 			this.Controls.Add(this.lbMes);
@@ -310,6 +419,12 @@ namespace CONEXION_BD
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.Label lbHoraSalida;
+		private System.Windows.Forms.ComboBox cbHoraInicio;
+		private System.Windows.Forms.ComboBox cbIdMateria;
+		private System.Windows.Forms.ComboBox cbIdMaestro;
+		private System.Windows.Forms.ComboBox cbDia;
+		private System.Windows.Forms.ComboBox cbIdAlumno;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.TextBox tbDia;
 		private System.Windows.Forms.Label lbAno;

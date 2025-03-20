@@ -9,6 +9,7 @@
 using System;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
+using System.Collections.Generic;
 
 
 namespace CONEXION_BD
@@ -221,7 +222,7 @@ namespace CONEXION_BD
 				
 				if(tipoTabla()==3) {
 					query+="INSERT INTO "+nameTabla+"(id_alumno,id_maestro, id_materia, hora_inicio,hora_salida, dia) " +
-					"VALUES ("+nombre+","+apellidoPaterno+","+apellidoMaterno+","+calle+","+fechaNacimiento+","+telefono+");";
+					"VALUES ("+nombre+","+apellidoPaterno+","+apellidoMaterno+","+calle+","+fechaNacimiento+",'"+telefono+"');";
 				}
 				else{
 				
@@ -251,6 +252,8 @@ namespace CONEXION_BD
 			string query="SELECT ";
 			
 			try{
+				
+				
 				if(tipoTabla()==2) query+="id, nombre FROM '"+nameTabla+"' WHERE id ="+id;
 				else if(tipoTabla()==3){ query+="id_horario, id_alumno, id_maestro, id_materia, hora_inicio, hora_salida, dia FROM "+nameTabla+" WHERE id_horario ="+id.ToString();
 				}
@@ -292,7 +295,66 @@ namespace CONEXION_BD
                 
 		}
 		
-		
+		public string[] consultarDataTablas(bool descripcion ,string nameTabla){//opcion 0=alumno  1=maestro 2=materia
+			List<string> lista = new List<string>();
+			
+			try{
+				string query= "SELECT * FROM "+nameTabla+";";
+				
+				cmd = new MySqlCommand(query, conection);
+               lectorCmd = cmd.ExecuteReader();
+               
+               while(lectorCmd.Read()){
+               	
+               	if(descripcion){
+               		
+               		if(nameTabla=="materia") lista.Add(lectorCmd["nombre"].ToString());
+               		else{
+               			string cadena=lectorCmd["nombre"].ToString()+" "+
+               				lectorCmd["Apellido_Paterno"].ToString()+" "+
+               				lectorCmd["Apellido_Materno"].ToString();
+               			lista.Add(cadena);
+               		}
+					
+					}else{
+               		lista.Add(lectorCmd["id"].ToString());
+					}
+               }
+               
+               lectorCmd.Close();
+			/*
+			switch(opcion){
+					
+					case 0://alumnos
+					
+				
+					
+					break;
+					case 1://maestros
+					if(descripcion){
+					
+					}else{
+					}
+					
+					break;
+				case 2://materia
+					if(descripcion){
+					
+					}else{
+					}
+					
+					break;
+					
+				}*/
+			
+			
+			}catch(Exception e){
+				ventana.start("Error Consultar DATA TABLAS "+e);
+			}
+			
+			
+		return lista.ToArray();
+		}
 		//metodos secundarios
 	
 	public int tipoTabla(){
