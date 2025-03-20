@@ -181,7 +181,7 @@ namespace CONEXION_BD
 		
 	
 			}catch(Exception e){
-				ventana.start("ERROR deleteData: "+e);
+				ventana.start("ERROR: EL ID ES INCORRECTO O NO ESTA ASIGNADO");
 			}
 		
 	}
@@ -319,6 +319,18 @@ namespace CONEXION_BD
                		}
 					
 					}else{
+               		
+               		//
+               		/*string cadena="- ";
+               			
+               		if(nameTabla=="materia") cadena+=(lectorCmd["nombre"].ToString());
+               		else{
+               			cadena+=lectorCmd["nombre"].ToString()+" "+
+               				lectorCmd["Apellido_Paterno"].ToString()+" "+
+               				lectorCmd["Apellido_Materno"].ToString();
+               			//lista.Add(cadena);
+               		}
+               		/*/
                		if(nameTabla=="horarios") lista.Add(lectorCmd["id_horario"].ToString());
                		else lista.Add(lectorCmd["id"].ToString());
 					}
@@ -359,7 +371,32 @@ namespace CONEXION_BD
 		return lista.ToArray();
 		}
 		
-		
+		public string getFilaTabla(string nameTabla,string id){
+			
+			try{
+			string query="SELECT nombre, Apellido_Paterno, Apellido_Materno FROM "+nameTabla+" WHERE id = "+id+";";
+			
+			if(nameTabla=="materia") query="SELECT nombre FROM "+nameTabla+" WHERE id = "+id+";";
+			
+			cmd= new MySqlCommand(query, conection);
+			using (MySqlDataReader reader = cmd.ExecuteReader())
+            {
+                if (reader.Read()) // Si hay una fila
+                {
+                	
+                	if(nameTabla=="materia")  return reader["nombre"].ToString();
+                	
+                	else return reader["nombre"].ToString()+" "+reader["Apellido_Paterno"].ToString()+" "+reader["Apellido_Materno"].ToString();
+                     }
+				
+			}
+			
+			lectorCmd.Close();
+			}catch(Exception e){
+				ventana.start("ERROR al leer");
+			}
+		return "";
+		}
 		//metodos secundarios
 	
 	public int tipoTabla(){

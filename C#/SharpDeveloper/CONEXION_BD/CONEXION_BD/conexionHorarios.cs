@@ -106,14 +106,14 @@ namespace CONEXION_BD
                     }
 
                     // Cerrar la conexión
-                    conection.Close();
+                   
                 }
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error al obtener el horario del alumno: " + e.Message);
             }
-
+ //lectorCmd.Close();
             return lista;
         }
 	

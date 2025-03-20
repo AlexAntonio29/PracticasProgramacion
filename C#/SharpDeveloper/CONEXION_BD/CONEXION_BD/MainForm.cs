@@ -40,7 +40,11 @@ namespace CONEXION_BD
 			try{
 				
 				
-				
+			lbDescripcionAlumno.Visible=false;
+			lbDescripcionMaestro.Visible=false;
+			lbDescripcionMateria.Visible=false;
+			
+							
 			cbIdMateria.Visible=false;
 			cbIdMateria.Items.AddRange(conect.consultarDataTablas(false,"materia"));
 			cbIdMateria.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -129,15 +133,15 @@ namespace CONEXION_BD
 		
 		void BAgregarClick(object sender, EventArgs e)
 		{
-			
+			if(accionSiNo()){
 			
 		string id=tbId.Text, nombre= tbNombre.Text, paterno= tbPaterno.Text, materno=tbMaterno.Text,
 		fNacimiento= tbAno.Text+"-"+tbMes.Text+"-"+tbDia.Text, calle=tbCalle.Text, telefono=tbTelefono.Text ;
 		if(fNacimiento=="--")fNacimiento="";
 		
 		if(conect.tipoTabla()==3){
-			id="1"; nombre=cbIdAlumno.Text; paterno=cbIdMaestro.Text;
-			materno=cbIdMateria.Text; calle= cbHoraInicio.Text;fNacimiento=lbHoraSalida.Text;
+			id="1"; nombre=getIDcomboBox(cbIdAlumno.Text); paterno=getIDcomboBox(cbIdMaestro.Text);
+			materno=getIDcomboBox(cbIdMateria.Text); calle= cbHoraInicio.Text;fNacimiento=lbHoraSalida.Text;
 			telefono=cbDia.Text;
 		}
 		if((id==""||nombre==""||paterno==""||materno==""||fNacimiento==""||calle==""||telefono=="")&&conect.tipoTabla()==3) ventana.start("ALERTA: APARTADOS VACIOS, FAVOR DE RELLENAR LOS DATOS");
@@ -147,22 +151,27 @@ namespace CONEXION_BD
 		}
 		
 		
-			
+		}
 		}
 		
 		void BActualizarClick(object sender, EventArgs e)
 		{
+			if(accionSiNo()){
+				
+				
+				
+			
 			string id=tbId.Text, nombre= tbNombre.Text, paterno= tbPaterno.Text, materno=tbMaterno.Text,
 		fNacimiento=  tbAno.Text+"-"+tbMes.Text+"-"+tbDia.Text, calle=tbCalle.Text, telefono=tbTelefono.Text ;
 		if(fNacimiento=="--")fNacimiento="";
 		if(conect.tipoTabla()==3){
-			id="1"; nombre=cbIdAlumno.Text; paterno=cbIdMaestro.Text;
-			materno=cbIdMateria.Text; calle= cbHoraInicio.Text;fNacimiento=lbHoraSalida.Text;
+			id="1"; nombre=getIDcomboBox(cbIdAlumno.Text); paterno=getIDcomboBox(cbIdMaestro.Text);
+			materno=getIDcomboBox(cbIdMateria.Text); calle= cbHoraInicio.Text;fNacimiento=lbHoraSalida.Text;
 			telefono=cbDia.Text;
 		}
 		
 		//conect.consultarData(id, nombre, paterno,materno,fNacimiento,calle,telefono);
-		
+		if(id!=""){
 		if(conect.tipoTabla()==2) {  if(nombre=="") nombre=conect.consultarData(id, nombre, paterno,materno,calle,fNacimiento,telefono); }
 		else {
 						if(nombre=="") 
@@ -183,18 +192,22 @@ namespace CONEXION_BD
 		
 		conect.updateData(dataGridView1,id,"'"+nombre+"'","'"+ paterno+"'","'"+materno+"'","'"+ calle+"'","'"+fNacimiento+"'", telefono);
 		
-		actualizarObjetos();
-		
+		actualizarObjetos();}
+		else ventana.start("NO SE HA ASIGNADO UN ID A MODIFICAR");
+		}
 			
 		}
 		
 		void BBorrarClick(object sender, EventArgs e)
 		{
+			if(accionSiNo()){
+			
 			string id=tbId.Text;
 			if(conect.tipoTabla()==3) id=cbIdHorario.Text;
 		conect.deleteData(dataGridView1,id);
 		actualizarObjetos();
-		
+			}
+			
 		}
 		
 		void TbTelefonoTextChanged(object sender, EventArgs e)
@@ -214,6 +227,12 @@ namespace CONEXION_BD
 			switch(conect.tipoTabla()){
 					
 					case 0: 
+					tbNombre.Width=60;
+					
+					lbDescripcionAlumno.Visible=false;
+			lbDescripcionMaestro.Visible=false;
+			lbDescripcionMateria.Visible=false;
+					
 					lbIdHorario.Visible=false;
 					cbIdHorario.Visible=false;
 					
@@ -229,7 +248,7 @@ namespace CONEXION_BD
 					lbTelefono.Visible=true;
 					tbTelefono.Visible=true;
 					
-					lbApMaterno.Text="Apellido Paterno:";
+					lbApPaterno.Text="Apellido Paterno:";
 					lbApPaterno.Visible=true;
 					tbPaterno.Visible=true;
 					
@@ -266,6 +285,12 @@ namespace CONEXION_BD
 					
 					break;
 					case 1: 
+					tbNombre.Width=60;
+					
+					lbDescripcionAlumno.Visible=false;
+			lbDescripcionMaestro.Visible=false;
+			lbDescripcionMateria.Visible=false;
+					
 					lbIdHorario.Visible=false;
 					cbIdHorario.Visible=false;
 					
@@ -281,7 +306,7 @@ namespace CONEXION_BD
 					lbTelefono.Visible=true;
 					tbTelefono.Visible=true;
 					
-					lbApMaterno.Text="Apellido Paterno:";
+					lbApPaterno.Text="Apellido Paterno:";
 					lbApPaterno.Visible=true;
 					tbPaterno.Visible=true;
 					
@@ -319,6 +344,11 @@ namespace CONEXION_BD
 					
 					
 					case 2: 
+					tbNombre.Width=300;
+					
+					lbDescripcionAlumno.Visible=false;
+			lbDescripcionMaestro.Visible=false;
+			lbDescripcionMateria.Visible=false;
 					
 					lbIdHorario.Visible=false;
 					cbIdHorario.Visible=false;
@@ -364,6 +394,14 @@ namespace CONEXION_BD
 					//cambio CB
 					
 					case 3:
+					tbNombre.Width=60;
+					
+					lbDescripcionAlumno.Visible=true;
+					lbDescripcionAlumno.Text= conect.getFilaTabla("alumnos", cbIdAlumno.Text);
+			lbDescripcionMaestro.Visible=true;
+			lbDescripcionMaestro.Text= conect.getFilaTabla("maestros", cbIdMaestro.Text);
+			lbDescripcionMateria.Visible=true;
+			lbDescripcionMateria.Text= conect.getFilaTabla("materia", cbIdMateria.Text);
 					
 					lbIdHorario.Visible=true;
 					cbIdHorario.Visible=true;
@@ -495,6 +533,59 @@ namespace CONEXION_BD
 			horarios getHorario= new horarios();
 			getHorario.ShowDialog();
 			
+		}
+		
+		public bool accionSiNo(){
+			
+			
+        // Mostrar cuadro de confirmación
+        DialogResult resultado = MessageBox.Show(
+            "¿Está seguro de realizar esta acción?", // Mensaje
+            "Confirmación",                         // Título del cuadro
+            MessageBoxButtons.YesNo,                // Botones: Sí y No
+            MessageBoxIcon.Warning                  // Icono de advertencia
+        );
+
+        // Realizar la acción según la respuesta del usuario
+        if (resultado == DialogResult.Yes)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    
+		}
+		
+		
+		public string getIDcomboBox(string texto){
+				char signo='-';
+				string cadena="";
+			foreach(char c in texto){
+					if(c==signo) break;
+					cadena+=c; 
+			}
+				
+			return cadena;	
+		}
+		
+		void CbIdAlumnoSelectedIndexChanged(object sender, EventArgs e)
+		{
+			
+			lbDescripcionAlumno.Text= conect.getFilaTabla("alumnos", cbIdAlumno.Text);
+			
+		}
+		
+		void CbIdMaestroSelectedIndexChanged(object sender, EventArgs e)
+		{
+			lbDescripcionMaestro.Text= conect.getFilaTabla("maestros", cbIdMaestro.Text);
+		}
+		
+		void CbIdMateriaSelectedIndexChanged(object sender, EventArgs e)
+		{
+			lbDescripcionMateria.Text= conect.getFilaTabla("materia", cbIdMateria.Text);
+				
 		}
 	}
 }

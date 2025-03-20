@@ -59,7 +59,7 @@ namespace CONEXION_BD
 									this.hORARIOSMAESTROSToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
-			this.menuStrip1.Size = new System.Drawing.Size(1924, 33);
+			this.menuStrip1.Size = new System.Drawing.Size(1878, 33);
 			this.menuStrip1.TabIndex = 0;
 			this.menuStrip1.Text = "menuStrip1";
 			// 
@@ -93,10 +93,10 @@ namespace CONEXION_BD
 									this.cMiercoles,
 									this.cJueves,
 									this.cViernes});
-			this.dgvHorario.Location = new System.Drawing.Point(0, 106);
+			this.dgvHorario.Location = new System.Drawing.Point(100, 200);
 			this.dgvHorario.Name = "dgvHorario";
 			this.dgvHorario.RowTemplate.Height = 28;
-			this.dgvHorario.Size = new System.Drawing.Size(1400, 800);
+			this.dgvHorario.Size = new System.Drawing.Size(1520, 620);
 			this.dgvHorario.TabIndex = 2;
 			// 
 			// cHora
@@ -109,31 +109,31 @@ namespace CONEXION_BD
 			// 
 			this.cLunes.HeaderText = "Lunes";
 			this.cLunes.Name = "cLunes";
-			this.cLunes.Width = 145;
+			this.cLunes.Width = 170;
 			// 
 			// cMartes
 			// 
 			this.cMartes.HeaderText = "Martes";
 			this.cMartes.Name = "cMartes";
-			this.cMartes.Width = 145;
+			this.cMartes.Width = 170;
 			// 
 			// cMiercoles
 			// 
 			this.cMiercoles.HeaderText = "Miercoles";
 			this.cMiercoles.Name = "cMiercoles";
-			this.cMiercoles.Width = 145;
+			this.cMiercoles.Width = 170;
 			// 
 			// cJueves
 			// 
 			this.cJueves.HeaderText = "Jueves";
 			this.cJueves.Name = "cJueves";
-			this.cJueves.Width = 145;
+			this.cJueves.Width = 170;
 			// 
 			// cViernes
 			// 
 			this.cViernes.HeaderText = "Viernes";
 			this.cViernes.Name = "cViernes";
-			this.cViernes.Width = 145;
+			this.cViernes.Width = 170;
 			// 
 			// cbBuscar
 			// 
@@ -142,12 +142,13 @@ namespace CONEXION_BD
 			this.cbBuscar.Name = "cbBuscar";
 			this.cbBuscar.Size = new System.Drawing.Size(499, 28);
 			this.cbBuscar.TabIndex = 3;
+			this.cbBuscar.SelectedIndexChanged += new System.EventHandler(this.CbBuscarSelectedIndexChanged);
 			// 
 			// horarios
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1924, 1050);
+			this.ClientSize = new System.Drawing.Size(1878, 1050);
 			this.Controls.Add(this.cbBuscar);
 			this.Controls.Add(this.dgvHorario);
 			this.Controls.Add(this.lbBuscarHorario);

@@ -70,6 +70,9 @@ namespace CONEXION_BD
 			this.lbIdHorario = new System.Windows.Forms.Label();
 			this.cbIdHorario = new System.Windows.Forms.ComboBox();
 			this.bVerHorario = new System.Windows.Forms.Button();
+			this.lbDescripcionAlumno = new System.Windows.Forms.Label();
+			this.lbDescripcionMateria = new System.Windows.Forms.Label();
+			this.lbDescripcionMaestro = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -146,14 +149,14 @@ namespace CONEXION_BD
 			// 
 			// tbDia
 			// 
-			this.tbDia.Location = new System.Drawing.Point(829, 335);
+			this.tbDia.Location = new System.Drawing.Point(822, 396);
 			this.tbDia.Name = "tbDia";
 			this.tbDia.Size = new System.Drawing.Size(40, 26);
 			this.tbDia.TabIndex = 11;
 			// 
 			// lbNacimiento
 			// 
-			this.lbNacimiento.Location = new System.Drawing.Point(676, 338);
+			this.lbNacimiento.Location = new System.Drawing.Point(669, 399);
 			this.lbNacimiento.Name = "lbNacimiento";
 			this.lbNacimiento.Size = new System.Drawing.Size(132, 23);
 			this.lbNacimiento.TabIndex = 10;
@@ -176,14 +179,14 @@ namespace CONEXION_BD
 			// 
 			// tbMaterno
 			// 
-			this.tbMaterno.Location = new System.Drawing.Point(501, 332);
+			this.tbMaterno.Location = new System.Drawing.Point(494, 393);
 			this.tbMaterno.Name = "tbMaterno";
 			this.tbMaterno.Size = new System.Drawing.Size(91, 26);
 			this.tbMaterno.TabIndex = 13;
 			// 
 			// lbApMaterno
 			// 
-			this.lbApMaterno.Location = new System.Drawing.Point(348, 335);
+			this.lbApMaterno.Location = new System.Drawing.Point(341, 396);
 			this.lbApMaterno.Name = "lbApMaterno";
 			this.lbApMaterno.Size = new System.Drawing.Size(147, 23);
 			this.lbApMaterno.TabIndex = 12;
@@ -207,7 +210,7 @@ namespace CONEXION_BD
 			// 
 			// tbTelefono
 			// 
-			this.tbTelefono.Location = new System.Drawing.Point(200, 335);
+			this.tbTelefono.Location = new System.Drawing.Point(193, 396);
 			this.tbTelefono.Name = "tbTelefono";
 			this.tbTelefono.Size = new System.Drawing.Size(91, 26);
 			this.tbTelefono.TabIndex = 17;
@@ -215,7 +218,7 @@ namespace CONEXION_BD
 			// 
 			// lbTelefono
 			// 
-			this.lbTelefono.Location = new System.Drawing.Point(47, 335);
+			this.lbTelefono.Location = new System.Drawing.Point(40, 396);
 			this.lbTelefono.Name = "lbTelefono";
 			this.lbTelefono.Size = new System.Drawing.Size(90, 23);
 			this.lbTelefono.TabIndex = 16;
@@ -239,21 +242,21 @@ namespace CONEXION_BD
 			// 
 			// tbAno
 			// 
-			this.tbAno.Location = new System.Drawing.Point(932, 335);
+			this.tbAno.Location = new System.Drawing.Point(925, 396);
 			this.tbAno.Name = "tbAno";
 			this.tbAno.Size = new System.Drawing.Size(40, 26);
 			this.tbAno.TabIndex = 21;
 			// 
 			// tbMes
 			// 
-			this.tbMes.Location = new System.Drawing.Point(880, 335);
+			this.tbMes.Location = new System.Drawing.Point(873, 396);
 			this.tbMes.Name = "tbMes";
 			this.tbMes.Size = new System.Drawing.Size(40, 26);
 			this.tbMes.TabIndex = 22;
 			// 
 			// lbdia
 			// 
-			this.lbdia.Location = new System.Drawing.Point(829, 309);
+			this.lbdia.Location = new System.Drawing.Point(822, 370);
 			this.lbdia.Name = "lbdia";
 			this.lbdia.Size = new System.Drawing.Size(37, 23);
 			this.lbdia.TabIndex = 23;
@@ -261,7 +264,7 @@ namespace CONEXION_BD
 			// 
 			// lbMes
 			// 
-			this.lbMes.Location = new System.Drawing.Point(880, 309);
+			this.lbMes.Location = new System.Drawing.Point(873, 370);
 			this.lbMes.Name = "lbMes";
 			this.lbMes.Size = new System.Drawing.Size(40, 23);
 			this.lbMes.TabIndex = 24;
@@ -269,7 +272,7 @@ namespace CONEXION_BD
 			// 
 			// lbAno
 			// 
-			this.lbAno.Location = new System.Drawing.Point(935, 309);
+			this.lbAno.Location = new System.Drawing.Point(928, 370);
 			this.lbAno.Name = "lbAno";
 			this.lbAno.Size = new System.Drawing.Size(49, 23);
 			this.lbAno.TabIndex = 25;
@@ -290,6 +293,7 @@ namespace CONEXION_BD
 			this.cbIdAlumno.Name = "cbIdAlumno";
 			this.cbIdAlumno.Size = new System.Drawing.Size(121, 28);
 			this.cbIdAlumno.TabIndex = 27;
+			this.cbIdAlumno.SelectedIndexChanged += new System.EventHandler(this.CbIdAlumnoSelectedIndexChanged);
 			// 
 			// cbDia
 			// 
@@ -306,7 +310,7 @@ namespace CONEXION_BD
 									"Miercoles",
 									"Jueves",
 									"Viernes"});
-			this.cbDia.Location = new System.Drawing.Point(200, 335);
+			this.cbDia.Location = new System.Drawing.Point(193, 396);
 			this.cbDia.Name = "cbDia";
 			this.cbDia.Size = new System.Drawing.Size(121, 28);
 			this.cbDia.TabIndex = 28;
@@ -324,6 +328,7 @@ namespace CONEXION_BD
 			this.cbIdMaestro.Name = "cbIdMaestro";
 			this.cbIdMaestro.Size = new System.Drawing.Size(121, 28);
 			this.cbIdMaestro.TabIndex = 29;
+			this.cbIdMaestro.SelectedIndexChanged += new System.EventHandler(this.CbIdMaestroSelectedIndexChanged);
 			// 
 			// cbIdMateria
 			// 
@@ -334,10 +339,11 @@ namespace CONEXION_BD
 									"Jueves",
 									"Viernes"});
 			this.cbIdMateria.FormattingEnabled = true;
-			this.cbIdMateria.Location = new System.Drawing.Point(494, 332);
+			this.cbIdMateria.Location = new System.Drawing.Point(487, 393);
 			this.cbIdMateria.Name = "cbIdMateria";
 			this.cbIdMateria.Size = new System.Drawing.Size(121, 28);
 			this.cbIdMateria.TabIndex = 30;
+			this.cbIdMateria.SelectedIndexChanged += new System.EventHandler(this.CbIdMateriaSelectedIndexChanged);
 			// 
 			// cbHoraInicio
 			// 
@@ -373,7 +379,7 @@ namespace CONEXION_BD
 			// 
 			// lbHoraSalida
 			// 
-			this.lbHoraSalida.Location = new System.Drawing.Point(829, 335);
+			this.lbHoraSalida.Location = new System.Drawing.Point(822, 396);
 			this.lbHoraSalida.Name = "lbHoraSalida";
 			this.lbHoraSalida.Size = new System.Drawing.Size(143, 28);
 			this.lbHoraSalida.TabIndex = 32;
@@ -411,11 +417,38 @@ namespace CONEXION_BD
 			this.bVerHorario.UseVisualStyleBackColor = true;
 			this.bVerHorario.Click += new System.EventHandler(this.BVerHorarioClick);
 			// 
+			// lbDescripcionAlumno
+			// 
+			this.lbDescripcionAlumno.Location = new System.Drawing.Point(47, 327);
+			this.lbDescripcionAlumno.Name = "lbDescripcionAlumno";
+			this.lbDescripcionAlumno.Size = new System.Drawing.Size(424, 23);
+			this.lbDescripcionAlumno.TabIndex = 37;
+			this.lbDescripcionAlumno.Text = "label2";
+			// 
+			// lbDescripcionMateria
+			// 
+			this.lbDescripcionMateria.Location = new System.Drawing.Point(487, 436);
+			this.lbDescripcionMateria.Name = "lbDescripcionMateria";
+			this.lbDescripcionMateria.Size = new System.Drawing.Size(391, 23);
+			this.lbDescripcionMateria.TabIndex = 38;
+			this.lbDescripcionMateria.Text = "label3";
+			// 
+			// lbDescripcionMaestro
+			// 
+			this.lbDescripcionMaestro.Location = new System.Drawing.Point(494, 327);
+			this.lbDescripcionMaestro.Name = "lbDescripcionMaestro";
+			this.lbDescripcionMaestro.Size = new System.Drawing.Size(438, 23);
+			this.lbDescripcionMaestro.TabIndex = 39;
+			this.lbDescripcionMaestro.Text = "label4";
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1032, 411);
+			this.ClientSize = new System.Drawing.Size(1032, 479);
+			this.Controls.Add(this.lbDescripcionMaestro);
+			this.Controls.Add(this.lbDescripcionMateria);
+			this.Controls.Add(this.lbDescripcionAlumno);
 			this.Controls.Add(this.bVerHorario);
 			this.Controls.Add(this.cbIdHorario);
 			this.Controls.Add(this.lbIdHorario);
@@ -457,6 +490,9 @@ namespace CONEXION_BD
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.Label lbDescripcionMaestro;
+		private System.Windows.Forms.Label lbDescripcionMateria;
+		private System.Windows.Forms.Label lbDescripcionAlumno;
 		private System.Windows.Forms.Button bVerHorario;
 		private System.Windows.Forms.ComboBox cbIdHorario;
 		private System.Windows.Forms.Label lbIdHorario;
