@@ -67,6 +67,8 @@ namespace CONEXION_BD
 			this.cbIdMateria = new System.Windows.Forms.ComboBox();
 			this.cbHoraInicio = new System.Windows.Forms.ComboBox();
 			this.lbHoraSalida = new System.Windows.Forms.Label();
+			this.lbIdHorario = new System.Windows.Forms.Label();
+			this.cbIdHorario = new System.Windows.Forms.ComboBox();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -376,11 +378,35 @@ namespace CONEXION_BD
 			this.lbHoraSalida.TabIndex = 32;
 			this.lbHoraSalida.Text = "label2";
 			// 
+			// lbIdHorario
+			// 
+			this.lbIdHorario.Location = new System.Drawing.Point(579, 169);
+			this.lbIdHorario.Name = "lbIdHorario";
+			this.lbIdHorario.Size = new System.Drawing.Size(90, 23);
+			this.lbIdHorario.TabIndex = 33;
+			this.lbIdHorario.Text = "ID Horario";
+			// 
+			// cbIdHorario
+			// 
+			this.cbIdHorario.AutoCompleteCustomSource.AddRange(new string[] {
+									"Lunes",
+									"Martes",
+									"Miercoles",
+									"Jueves",
+									"Viernes"});
+			this.cbIdHorario.FormattingEnabled = true;
+			this.cbIdHorario.Location = new System.Drawing.Point(732, 169);
+			this.cbIdHorario.Name = "cbIdHorario";
+			this.cbIdHorario.Size = new System.Drawing.Size(121, 28);
+			this.cbIdHorario.TabIndex = 34;
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(984, 388);
+			this.Controls.Add(this.cbIdHorario);
+			this.Controls.Add(this.lbIdHorario);
 			this.Controls.Add(this.lbHoraSalida);
 			this.Controls.Add(this.cbHoraInicio);
 			this.Controls.Add(this.cbIdMateria);
@@ -419,6 +445,8 @@ namespace CONEXION_BD
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.ComboBox cbIdHorario;
+		private System.Windows.Forms.Label lbIdHorario;
 		private System.Windows.Forms.Label lbHoraSalida;
 		private System.Windows.Forms.ComboBox cbHoraInicio;
 		private System.Windows.Forms.ComboBox cbIdMateria;

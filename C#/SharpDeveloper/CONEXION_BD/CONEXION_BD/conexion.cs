@@ -144,7 +144,7 @@ namespace CONEXION_BD
                  	tabla.Rows[contador].Cells[2].Value=lectorCmd["id_maestro"];
                  	tabla.Rows[contador].Cells[3].Value=lectorCmd["id_materia"];
                  	tabla.Rows[contador].Cells[4].Value=lectorCmd["hora_inicio"];
-                 	tabla.Rows[contador].Cells[4].Value=lectorCmd["hora_salida"];
+                 	tabla.Rows[contador].Cells[5].Value=lectorCmd["hora_salida"];
                  	tabla.Rows[contador].Cells[6].Value=lectorCmd["dia"];
                  	contador++;
                  }
@@ -240,7 +240,9 @@ namespace CONEXION_BD
 		updateTabla(tabla);
 		
 			}catch(Exception e){
-				ventana.start("DATOS MAL IMPLEMENTADOS O NO RELLENADOS");
+				string mensaje="DATOS MAL IMPLEMENTADOS O NO RELLENADOS";
+				if(tipoTabla()==3) mensaje="HORARIO MAL IMPLEMENTADO: ALERTA CHOQUE DE HORARIOS REVISAR";
+				ventana.start(mensaje);
 				
 				
 			}
@@ -317,7 +319,8 @@ namespace CONEXION_BD
                		}
 					
 					}else{
-               		lista.Add(lectorCmd["id"].ToString());
+               		if(nameTabla=="horarios") lista.Add(lectorCmd["id_horario"].ToString());
+               		else lista.Add(lectorCmd["id"].ToString());
 					}
                }
                
@@ -355,6 +358,8 @@ namespace CONEXION_BD
 			
 		return lista.ToArray();
 		}
+		
+		
 		//metodos secundarios
 	
 	public int tipoTabla(){

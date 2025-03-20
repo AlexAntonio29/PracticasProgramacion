@@ -44,9 +44,18 @@ namespace CONEXION_BD
 			cbIdMateria.Visible=false;
 			cbIdMateria.Items.AddRange(conect.consultarDataTablas(false,"materia"));
 			cbIdMateria.DropDownStyle = ComboBoxStyle.DropDownList;
-			cbIdMateria.SelectedIndexChanged +=(sender, e) =>{
+			//cbIdMateria.SelectedIndexChanged +=(sender, e) =>{
 				
-			};
+			//};
+			
+			cbIdHorario.Visible=false;
+			cbIdHorario.Items.AddRange(conect.consultarDataTablas(false,"horarios"));
+			cbIdHorario.DropDownStyle = ComboBoxStyle.DropDownList;
+			
+			lbIdHorario.Visible=false;
+			
+			
+			
 			
 			
 			cbIdMaestro.Visible=false;
@@ -62,6 +71,7 @@ namespace CONEXION_BD
 			cbIdMateria.SelectedIndex=0;
 			cbIdMaestro.SelectedIndex=0;
 			cbIdAlumno.SelectedIndex=0;
+			cbIdHorario.SelectedIndex=0;
 			}catch(Exception e){
 				ventana.start("SIN DATOS AGREGADOS EN LOS COMBO BOX DE HORARIOS");	
 			}
@@ -130,16 +140,12 @@ namespace CONEXION_BD
 			materno=cbIdMateria.Text; calle= cbHoraInicio.Text;fNacimiento=lbHoraSalida.Text;
 			telefono=cbDia.Text;
 		}
+		if(id==""||nombre==""||paterno==""||materno==""||fNacimiento==""||calle==""||telefono=="") ventana.start("ALERTA: APARTADOS VACIOS, FAVOR DE RELLENAR LOS DATOS");
+		else{
 		conect.addData(dataGridView1,id,"'"+nombre+"'","'"+ paterno+"'","'"+materno+"'","'"+ calle+"'","'"+fNacimiento+"'", telefono);
-		tbId.Text="";
-		tbNombre.Text="";
-		tbPaterno.Text="";
-		tbMaterno.Text="";
-		tbDia.Text="";
-		tbMes.Text="";
-		tbAno.Text="";
-		tbCalle.Text="";
-		tbTelefono.Text="";
+		actualizarObjetos();
+		}
+		
 		
 			
 		}
@@ -177,15 +183,7 @@ namespace CONEXION_BD
 		
 		conect.updateData(dataGridView1,id,"'"+nombre+"'","'"+ paterno+"'","'"+materno+"'","'"+ calle+"'","'"+fNacimiento+"'", telefono);
 		
-		tbId.Text="";
-		tbNombre.Text="";
-		tbPaterno.Text="";
-		tbMaterno.Text="";
-		tbDia.Text="";
-		tbMes.Text="";
-		tbAno.Text="";
-		tbCalle.Text="";
-		tbTelefono.Text="";
+		actualizarObjetos();
 		
 			
 		}
@@ -193,16 +191,9 @@ namespace CONEXION_BD
 		void BBorrarClick(object sender, EventArgs e)
 		{
 			string id=tbId.Text;
+			if(conect.tipoTabla()==3) id=cbIdHorario.Text;
 		conect.deleteData(dataGridView1,id);
-		tbId.Text="";
-		tbNombre.Text="";
-		tbPaterno.Text="";
-		tbMaterno.Text="";
-		tbDia.Text="";
-		tbMes.Text="";
-		tbAno.Text="";
-		tbCalle.Text="";
-		tbTelefono.Text="";
+		actualizarObjetos();
 		
 		}
 		
@@ -218,9 +209,14 @@ namespace CONEXION_BD
 			conect=new conexion(Table);
 			conect.startConexion(dataGridView1);
 			
+			actualizarObjetos();
+			
 			switch(conect.tipoTabla()){
 					
 					case 0: 
+					lbIdHorario.Visible=false;
+					cbIdHorario.Visible=false;
+					
 					lbId.Text="No.Control";
 					lbId.Visible=true;
 					tbId.Visible=true;
@@ -270,6 +266,9 @@ namespace CONEXION_BD
 					
 					break;
 					case 1: 
+					lbIdHorario.Visible=false;
+					cbIdHorario.Visible=false;
+					
 					lbId.Text="No.Control";
 					lbId.Visible=true;
 					tbId.Visible=true;
@@ -321,6 +320,9 @@ namespace CONEXION_BD
 					
 					case 2: 
 					
+					lbIdHorario.Visible=false;
+					cbIdHorario.Visible=false;
+					
 					lbId.Text="No.Control";
 					lbId.Visible=true;
 					tbId.Visible=true;
@@ -362,6 +364,10 @@ namespace CONEXION_BD
 					//cambio CB
 					
 					case 3:
+					
+					lbIdHorario.Visible=true;
+					cbIdHorario.Visible=true;
+					
 					lbId.Text="ID";
 					lbId.Visible=false;
 					tbId.Visible=false;
@@ -451,5 +457,37 @@ namespace CONEXION_BD
 		{
 			
 		}
+	
+		public void actualizarObjetos(){
+			
+			
+		cbIdHorario.Items.Clear();
+		cbIdMateria.Items.Clear();
+		cbIdMaestro.Items.Clear();
+		cbIdAlumno.Items.Clear();
+		
+		
+		
+			cbIdMateria.Items.AddRange(conect.consultarDataTablas(false,"materia"));
+			cbIdMaestro.Items.AddRange(conect.consultarDataTablas(false,"maestros"));
+			cbIdAlumno.Items.AddRange(conect.consultarDataTablas(false,"alumnos"));
+			cbIdHorario.Items.AddRange(conect.consultarDataTablas(false,"horarios"));
+			
+			cbIdHorario.SelectedIndex=0;
+			cbIdMateria.SelectedIndex=0;
+			cbIdMaestro.SelectedIndex=0;
+			cbIdAlumno.SelectedIndex=0;
+			
+			tbId.Text="";
+		tbNombre.Text="";
+		tbPaterno.Text="";
+		tbMaterno.Text="";
+		tbDia.Text="";
+		tbMes.Text="";
+		tbAno.Text="";
+		tbCalle.Text="";
+		tbTelefono.Text="";
+		}
+	
 	}
 }
