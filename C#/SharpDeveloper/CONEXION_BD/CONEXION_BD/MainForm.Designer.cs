@@ -69,6 +69,7 @@ namespace CONEXION_BD
 			this.lbHoraSalida = new System.Windows.Forms.Label();
 			this.lbIdHorario = new System.Windows.Forms.Label();
 			this.cbIdHorario = new System.Windows.Forms.ComboBox();
+			this.bVerHorario = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -400,11 +401,22 @@ namespace CONEXION_BD
 			this.cbIdHorario.Size = new System.Drawing.Size(121, 28);
 			this.cbIdHorario.TabIndex = 34;
 			// 
+			// bVerHorario
+			// 
+			this.bVerHorario.Location = new System.Drawing.Point(761, 25);
+			this.bVerHorario.Name = "bVerHorario";
+			this.bVerHorario.Size = new System.Drawing.Size(159, 43);
+			this.bVerHorario.TabIndex = 35;
+			this.bVerHorario.Text = "Ver Horarios";
+			this.bVerHorario.UseVisualStyleBackColor = true;
+			this.bVerHorario.Click += new System.EventHandler(this.BVerHorarioClick);
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(984, 388);
+			this.ClientSize = new System.Drawing.Size(1032, 411);
+			this.Controls.Add(this.bVerHorario);
 			this.Controls.Add(this.cbIdHorario);
 			this.Controls.Add(this.lbIdHorario);
 			this.Controls.Add(this.lbHoraSalida);
@@ -445,6 +457,7 @@ namespace CONEXION_BD
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.Button bVerHorario;
 		private System.Windows.Forms.ComboBox cbIdHorario;
 		private System.Windows.Forms.Label lbIdHorario;
 		private System.Windows.Forms.Label lbHoraSalida;

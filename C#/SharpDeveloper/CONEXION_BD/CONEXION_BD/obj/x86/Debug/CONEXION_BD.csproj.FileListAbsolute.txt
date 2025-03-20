@@ -12,3 +12,4 @@ U:\Documents\GitHub\Cuentas\AlexAntonio29\PRACTICAS-PROGRAMACION\C#\SharpDevelop
 U:\Documents\GitHub\Cuentas\AlexAntonio29\PRACTICAS-PROGRAMACION\C#\SharpDeveloper\CONEXION_BD\CONEXION_BD\obj\x86\Debug\CONEXION_BD.csproj.GenerateResource.Cache
 U:\Documents\GitHub\Cuentas\AlexAntonio29\PRACTICAS-PROGRAMACION\C#\SharpDeveloper\CONEXION_BD\CONEXION_BD\obj\x86\Debug\CONEXION_BD.exe
 U:\Documents\GitHub\Cuentas\AlexAntonio29\PRACTICAS-PROGRAMACION\C#\SharpDeveloper\CONEXION_BD\CONEXION_BD\obj\x86\Debug\CONEXION_BD.pdb
+U:\Documents\GitHub\Cuentas\AlexAntonio29\PRACTICAS-PROGRAMACION\C#\SharpDeveloper\CONEXION_BD\CONEXION_BD\obj\x86\Debug\CONEXION_BD.horarios.resources

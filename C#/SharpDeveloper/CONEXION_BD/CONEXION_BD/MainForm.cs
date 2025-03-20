@@ -140,7 +140,7 @@ namespace CONEXION_BD
 			materno=cbIdMateria.Text; calle= cbHoraInicio.Text;fNacimiento=lbHoraSalida.Text;
 			telefono=cbDia.Text;
 		}
-		if(id==""||nombre==""||paterno==""||materno==""||fNacimiento==""||calle==""||telefono=="") ventana.start("ALERTA: APARTADOS VACIOS, FAVOR DE RELLENAR LOS DATOS");
+		if((id==""||nombre==""||paterno==""||materno==""||fNacimiento==""||calle==""||telefono=="")&&conect.tipoTabla()==3) ventana.start("ALERTA: APARTADOS VACIOS, FAVOR DE RELLENAR LOS DATOS");
 		else{
 		conect.addData(dataGridView1,id,"'"+nombre+"'","'"+ paterno+"'","'"+materno+"'","'"+ calle+"'","'"+fNacimiento+"'", telefono);
 		actualizarObjetos();
@@ -489,5 +489,12 @@ namespace CONEXION_BD
 		tbTelefono.Text="";
 		}
 	
+		
+		void BVerHorarioClick(object sender, EventArgs e)
+		{
+			horarios getHorario= new horarios();
+			getHorario.ShowDialog();
+			
+		}
 	}
 }
