@@ -3,6 +3,7 @@ package com.app.appholamundo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -13,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button bPush;
+    ImageButton bPush;
     TextView tvF;
     TextView tvName;
 
@@ -23,9 +24,9 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        bPush.findViewById(R.id.bPush);
-        tvF.findViewById(R.id.tvF);
-        tvName.findViewById(R.id.tvName);
+        bPush=findViewById(R.id.bPush);
+        tvF=findViewById(R.id.tvF);
+        tvName=findViewById(R.id.tvName);
         bPush.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
