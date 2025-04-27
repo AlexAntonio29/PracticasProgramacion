@@ -1,13 +1,15 @@
+package metodos.secant;
+
 import org.mariuszgromada.math.mxparser.Expression;
 
-public class PointMethod {
+public class SecantMethod {
     private String function;
     private double tolerance;
     private int maxIterations;
     private StringBuilder steps;
     private OnStepListener listener;
 
-    public PointMethod(String function, double tolerance, int maxIterations) {
+    public SecantMethod(String function, double tolerance, int maxIterations) {
         this.function = function;
         this.tolerance = tolerance;
         this.maxIterations = maxIterations;
@@ -22,39 +24,40 @@ public class PointMethod {
         this.listener = listener;
     }
 
-    // Evaluar la función g(x) usando mXparser
+    // Evaluar la función usando mXparser
     private double evaluate(double x) {
         String expression = function.replace("x", "(" + x + ")");
         Expression e = new Expression(expression);
         return e.calculate();
     }
 
-    public double solve(double x0) {
-        double x1;
-        int iteration = 0;
+    public double solve(double x0, double x1) {
+        double f0 = evaluate(x0);
+        double f1 = evaluate(x1);
+        double xNext;
+        int iter = 0;
 
-        while (iteration < maxIterations) {
-            x1 = evaluate(x0);
-            double error = Math.abs(x1 - x0);
+        while (Math.abs(f1) > tolerance && iter < maxIterations) {
+            if (Math.abs(x1 - x0) < 1e-10) {
+                throw new ArithmeticException("División por un número muy pequeño, riesgo de inestabilidad.");
+            }
 
-            // Registrar el paso
-            steps.append(String.format("Iteración %d: x = %.6f, g(x) = %.6f, Error = %.6f\n",
-                    iteration + 1, x0, x1, error));
+            xNext = x1 - f1 * (x1 - x0) / (f1 - f0);
+            steps.append(String.format("Iteración %d: x0 = %.6f, x1 = %.6f, xNext = %.6f\n", iter, x0, x1, xNext));
 
             if (listener != null) {
                 listener.onStep(steps.toString());
             }
 
-            // Verificar la condición de parada
-            if (error < tolerance) {
-                return x1;
-            }
-
             x0 = x1;
-            iteration++;
+            x1 = xNext;
+            f0 = f1;
+            f1 = evaluate(x1);
+
+            iter++;
         }
 
-        throw new IllegalArgumentException("El método no convergió después de " + maxIterations + " iteraciones.");
+        return x1;
     }
 
     public interface OnStepListener {

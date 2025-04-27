@@ -1,3 +1,5 @@
+package metodos.point;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;

@@ -1,3 +1,5 @@
+package metodos.bisection;
+
 import org.mariuszgromada.math.mxparser.Expression;
 
 public class BisectionMethod {

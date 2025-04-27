@@ -1,9 +1,10 @@
+package metodos.bisection;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.border.EmptyBorder;
-import org.mariuszgromada.math.mxparser.Expression;
 
 public class BisectionCalculator extends JDialog {
     private JTextField functionField, aField, bField, toleranceField;
