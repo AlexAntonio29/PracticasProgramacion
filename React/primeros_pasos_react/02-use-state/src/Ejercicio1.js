@@ -34,16 +34,16 @@ let changetext = (e, textoFijo)=>{  !isNaN(document.getElementById("inputYear").
     <div>
 
 
-        <button onClick={e=>after(e)}>Anterior</button>
+        <button onClick={e=>after(e)}  style={{background:'white',color:'red',borderRadius:'10px'}}>Anterior</button>
         &nbsp;
            <strong>{change}</strong>
         &nbsp;
-        <button onClick={e=>next(e)}>Siguiente</button>
+        <button onClick={e=>next(e)}  style={{background:'white', color:'red',borderRadius:'10px'}}>Siguiente</button>
 
 
         <h3>Modificar Fecha Manual</h3>
 
-        <input type='text' onChange={ e=> changetext(e, parseInt(e.target.value))} placeholder='introduce año'  id='inputYear'/>
+        <input  type='text' onChange={ e=> changetext(e, parseInt(e.target.value))} placeholder='introduce año'  id='inputYear'/>
         <hr/>
     </div>
 

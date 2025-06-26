@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import { Ejercicio1 } from './Ejercicio1';
+import { RetroAlimentacionEjercicioUseState } from './RetroAlimentacionEjercicioUseState';
 
 function App() {
 
@@ -11,9 +12,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        
 
 
 
@@ -23,8 +22,8 @@ function App() {
        <h2>Ejercicio 1</h2>
 
 
-       <Ejercicio1/>  {/*va directamente al componente Ejercicio1.js*/};
-      
+       {/*<Ejercicio1/>  va directamente al componente Ejercicio1.js*/}
+      <RetroAlimentacionEjercicioUseState/>{/*Retroalimentracion*/ }
       </header>
     </div>
   );
