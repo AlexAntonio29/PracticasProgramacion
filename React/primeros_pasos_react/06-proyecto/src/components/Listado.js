@@ -15,7 +15,7 @@ export const Listado = ({listadoState, setListadoState}) => {
     //REGLA DE ORO LOS HOOKS SIEMPRE DEBEN DE ESTAR ARRIBA DE LAS FUNCIONES RECOMENDADO POR REACT
     useEffect (() => {
         console.log("Cargando componentes listado:");
-        console.log(listadoState);
+      
         conseguirListadoPeliculas();
 
     },[]);
@@ -85,7 +85,12 @@ export const Listado = ({listadoState, setListadoState}) => {
                 <button className="delete" onClick={()=>borrarPelicula(pelicula.id)}>Borrar</button>
            
             {  editSate === pelicula.id &&
-            (< Editar/>)}
+            (< Editar   pelicula={pelicula} 
+                        conseguirListadoPeliculas={conseguirListadoPeliculas} 
+                        setListadoState={setListadoState}
+                        setEditState={setEditState}
+                        
+                        />)}
 
             
             </article>
