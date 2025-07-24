@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.nav_activado{
+  font-weight: bold;
+  color: rgb(255, 0, 0);
+  text-decoration: none;
+  font-size: 18px;
+}
+.not_nav_activado{
+  font-weight: bold;
+  color: rgb(43, 43, 158);
+  text-decoration: none;
+  font-size: 15px;
+}

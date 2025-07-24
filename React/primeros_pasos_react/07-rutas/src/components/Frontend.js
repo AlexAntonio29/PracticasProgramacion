@@ -11,10 +11,14 @@ export const Frontend = () => {
        <header>
         <h1>Titulo de la pagina</h1>
        </header>
-
+    <hr/>
       <Navegacion/>
+      <hr/>
       <Outlet/>
-
+<hr/>
+        <footer>
+          <p>Pie de pagina</p>
+        </footer>
     
 
     </div>
