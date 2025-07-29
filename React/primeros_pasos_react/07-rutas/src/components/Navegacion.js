@@ -33,6 +33,17 @@ export const Navegacion = () => {
               
             }
             to={"/articulo"}> Articulo </NavLink> </li>
+
+            <li> <NavLink
+            className={
+              ({isActive})=>isActive?"nav_activado" : "not_nav_activado"
+            } to={"/persona"} > Persona</NavLink>
+
+            </li>
+
+            <li><NavLink to="/panel" className={({isActive})=>
+              isActive?"nav_activado":"not_nav_activado"
+            }>Panel Control</NavLink></li>
         </ul>
        </nav>
     </div>

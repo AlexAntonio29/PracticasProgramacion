@@ -1,0 +1,37 @@
+
+
+import {createBrowserRouter, RouterProvider} from 'react-router-dom';
+import { Inicio } from '/../Inicio';
+import { Articulo } from '/../Articulo';
+import {Error} from '/../Error';
+import {Frontend} from '/../Frontend'
+
+
+
+export const RouterPrincipal=()=>{
+
+
+const rutas= createBrowserRouter(
+[{
+path:"/" , element: <Index/>,
+
+children:
+[
+path:"/inicio", element:<Inicio/>,
+path:"/articulo", element:<Articulo/>,
+path:"/*", element:<Error/>
+]
+}]
+);
+
+
+return(
+
+<RouterProvider rutas={rutas}
+future={{v7_startTransition:true}}
+/>
+
+)
+
+
+}

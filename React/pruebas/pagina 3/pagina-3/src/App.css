@@ -36,37 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-
-/*Diseño por defecto de Link*/
-Link{
-  text-decoration: none;
-  color: white;
-}
-
-.nav_activado{
-  font-weight: bold;
-  color: rgb(255, 0, 0);
-  text-decoration: none;
-  font-size: 18px;
-}
-.not_nav_activado{
-  font-weight: bold;
-  color: rgb(43, 43, 158);
-  text-decoration: none;
-  font-size: 15px;
-}
-
-.button_active{
-
-  text-decoration: none;
-  background: red;
-  color: white;
-  border-radius: 10px;
-  border: 1px solid #000 ;
-  transition: all 300ms;
-}
-.button_active:hover{
-  text-decoration: none;
-  background: blue;
-}
