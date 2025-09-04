@@ -1,19 +1,28 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
+import { HeaderNav } from './layout/HeaderNav'
+import { Footer } from './layout/Footer'
 
 export const Frontend = () => {
   return (
     <div>
-        {/*HEAD*/}
-        <h3>Cabeza</h3>
-        {/*NAVEGATION*/}
-        <h3>Navegacion</h3>
-        {/*BODY*/}
-        <h3>Cuerpo</h3>
-        <Outlet/>
 
-        <h3>Pie de Página</h3>
+       
+        {/*HEAD*/}
+    
+        <HeaderNav/>
+       
+        
+        {/*BODY*/}
+        <section className='content'>
+          
+          <Outlet/>
+        </section>
+        
+
+        
         {/*FOOTER*/}
+        <Footer/>
     
 
     </div>

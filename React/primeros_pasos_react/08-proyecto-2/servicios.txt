@@ -1,0 +1,34 @@
+Servicios:
+
+Desarrollo web
+	-Desarrollo web
+		-Creo tu página desde cero
+	-Diseño Web
+		-Tu Diseño sera las mas atractiva, elegante o intuitiva
+	-Posicionamiento Web
+		-Tu página entre las primeras busquedas de internet
+
+Aplicaciones Moviles
+	-Desarrollo Android para telefono.
+		-Aplicación de Gestión.
+			-Te creamos una aplicacion para poder gestionar tu negocio, simplificar tu trabajo, y poder tener un mejor control de tus actividades reduciendo asi los trabajos repetitivos
+		-Aplicación de Entretenimiento.
+			-Obtienes tu aplicación de entretenimiento 2d y 3d
+		-Aplicación de Productividad.
+			-Creamos tu aplicación donde puedas tener un mejor control y optimización de actividades para mayor facilidad al obtener datos.
+		-Aplicación de Educación.
+			-No hay mejor manera de transimitir conocimiento a través de los medios tecnologicos actuales, asi que no hay mejor momentos que transimir tu conocimentos a nuevas generaciones.
+		-Aplicacion de Comercio.
+			-Si tu tienes tu negocio, no hay mejor manera de llegar a tu audiencia que los telefonos móviles. Facilitando su acceso e interaccion con tus servicios para una mejor comididad.
+		-Aplicación de Finanzas.
+			-Ten un mejor control de tu dinero y/o aprende como administrarlo a traves de tu propia aplicación de gestion de ingresos.
+	
+
+Aplicaciones de Escritorio
+	-Desarrollo Windows
+		-Creamos tu punto de venta
+			-Creamos un punto de venta para tener un mejor control de tus productos
+		-Configuramos tu programa de administración.
+			-Desarrollamos tu programa segun tus necesidades, desde un consultorio médico hasta un programa de control.
+		
+	

@@ -1,7 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { trabajos } from './data/trabajos'
+import { Link } from 'react-router-dom'
+import { ListadoTrabajos } from './ListadoTrabajos'
+
+
+
 
 export const Portafolio = () => {
+
+
   return (
-    <div>Portafolio</div>
+   <div className='page'>
+
+    <h1>Portafolio</h1>
+
+   <ListadoTrabajos/>
+   
+   </div>
   )
 }

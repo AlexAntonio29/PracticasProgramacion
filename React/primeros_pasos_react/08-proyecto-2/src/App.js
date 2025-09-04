@@ -5,7 +5,7 @@ import { Rutas } from './router/Rutas';
 
 function App() {
   return (
-    <div>
+    <div className='layout'>
 
     <Rutas/>
       
