@@ -73,7 +73,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="C-vyLk0tnHw3VtMMgP7b-13" value="Reseña" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;" parent="1" vertex="1">
-          <mxGeometry x="260" y="300" width="300" height="230" as="geometry" />
+          <mxGeometry x="290" y="300" width="300" height="230" as="geometry" />
         </mxCell>
         <mxCell id="C-vyLk0tnHw3VtMMgP7b-14" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" parent="C-vyLk0tnHw3VtMMgP7b-13" vertex="1">
           <mxGeometry y="30" width="300" height="30" as="geometry" />
@@ -210,8 +210,35 @@
             <mxRectangle width="300" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="T2EgsId0SWa9-_tdi_Lb-28" value="Obtiene" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="670" y="240" width="80" height="80" as="geometry" />
+        <mxCell id="T2EgsId0SWa9-_tdi_Lb-30" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="T2EgsId0SWa9-_tdi_Lb-28" target="C-vyLk0tnHw3VtMMgP7b-20">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="T2EgsId0SWa9-_tdi_Lb-31" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="C-vyLk0tnHw3VtMMgP7b-3" target="T2EgsId0SWa9-_tdi_Lb-28">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="790" y="95" as="sourcePoint" />
+            <mxPoint x="560" y="405" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="830" y="95" />
+              <mxPoint x="830" y="405" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="T2EgsId0SWa9-_tdi_Lb-28" value="Obtiene&lt;div&gt;N:1&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="365" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="T2EgsId0SWa9-_tdi_Lb-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="T2EgsId0SWa9-_tdi_Lb-34" target="C-vyLk0tnHw3VtMMgP7b-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="T2EgsId0SWa9-_tdi_Lb-35" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="C-vyLk0tnHw3VtMMgP7b-24" target="T2EgsId0SWa9-_tdi_Lb-34">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="50" y="85" as="sourcePoint" />
+            <mxPoint x="260" y="375" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="T2EgsId0SWa9-_tdi_Lb-34" value="Genera&lt;div&gt;1:N&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="300" width="80" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
