@@ -256,6 +256,9 @@
             </Array>
           </mxGeometry>
         </mxCell>
+        <mxCell id="T2EgsId0SWa9-_tdi_Lb-40" value="Filtrar negocio por calificacion:&lt;div&gt;SELECT id_reseña, id_negocio, calificacion FROM Reseña&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;ORDEN BY calificacion DESC&lt;/span&gt;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#dae8fc;strokeColor=#6c8ebf;fillStyle=solid;direction=west;gradientDirection=north;shadow=1;size=20;pointerEvents=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="540" width="640" height="50" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
