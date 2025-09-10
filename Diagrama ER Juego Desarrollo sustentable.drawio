@@ -278,7 +278,7 @@
         <mxCell id="tNWPsRcVVRpt45OIeigI-33" value="Tiene&lt;div&gt;1:N&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="370" y="55" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="tNWPsRcVVRpt45OIeigI-37" value="genera&lt;div&gt;1:N&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="tNWPsRcVVRpt45OIeigI-37" value="Genera&lt;div&gt;1:N&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="730" y="220" width="80" height="80" as="geometry" />
         </mxCell>
       </root>
