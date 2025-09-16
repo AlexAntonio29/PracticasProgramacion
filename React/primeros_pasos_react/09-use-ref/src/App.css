@@ -1,5 +1,9 @@
 .App {
-  text-align: center;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
 }
 
 .App-logo {
@@ -35,4 +39,37 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.cuadro{
+  align-items: center;
+ 
+  width: 400px;
+
+  color: #535353;
+  background: #ffffff;
+  margin: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 15px;
+  border: 1px solid #282c34;
+  box-shadow: 0 5px 10px #a0a0a0;
+}
+
+.complete{
+  background-color:  rgb(0, 227, 0);
+}
+
+span{
+  margin: 15px;
+  display:inline-block;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 5px;
+  width: 10px;
+  height: 10px;
+  font-size: 10px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: red;
+  color: white;
 }
