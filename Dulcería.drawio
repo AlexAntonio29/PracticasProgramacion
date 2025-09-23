@@ -311,6 +311,24 @@
             <mxPoint x="440" y="500" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="6OPiGLtKQRhlAA7yIBba-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6OPiGLtKQRhlAA7yIBba-49">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="560" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6OPiGLtKQRhlAA7yIBba-49" value="id_usuario" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="570" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="6OPiGLtKQRhlAA7yIBba-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="6OPiGLtKQRhlAA7yIBba-51" target="enX2_YqvGUqd8-A0arO4-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="580" y="505" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6OPiGLtKQRhlAA7yIBba-51" value="id_inventario" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="440" width="90" height="40" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
