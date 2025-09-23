@@ -214,56 +214,56 @@
         <mxCell id="6OPiGLtKQRhlAA7yIBba-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6OPiGLtKQRhlAA7yIBba-29" target="enX2_YqvGUqd8-A0arO4-1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="250" y="710" />
-              <mxPoint x="250" y="710" />
+              <mxPoint x="280" y="780" />
+              <mxPoint x="280" y="780" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="6OPiGLtKQRhlAA7yIBba-29" value="id_inventario" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="205" y="790" width="105" height="40" as="geometry" />
+          <mxGeometry x="192.5" y="910" width="105" height="40" as="geometry" />
         </mxCell>
         <mxCell id="6OPiGLtKQRhlAA7yIBba-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="6OPiGLtKQRhlAA7yIBba-31" target="enX2_YqvGUqd8-A0arO4-1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="310" y="870" />
+              <mxPoint x="310" y="970" />
               <mxPoint x="310" y="690" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="6OPiGLtKQRhlAA7yIBba-31" value="id_usuario" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="192.5" y="850" width="105" height="40" as="geometry" />
+          <mxGeometry x="185" y="950" width="105" height="40" as="geometry" />
         </mxCell>
         <mxCell id="6OPiGLtKQRhlAA7yIBba-33" value="cantidad&lt;div&gt;CHECK(cantidad&amp;gt;0)&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="170" y="910" width="130" height="50" as="geometry" />
+          <mxGeometry x="167.5" y="1000" width="130" height="50" as="geometry" />
         </mxCell>
         <mxCell id="6OPiGLtKQRhlAA7yIBba-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.884;entryY=1.067;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="6OPiGLtKQRhlAA7yIBba-33" target="enX2_YqvGUqd8-A0arO4-1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="336" y="930" />
+              <mxPoint x="336" y="1025" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="6OPiGLtKQRhlAA7yIBba-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="6OPiGLtKQRhlAA7yIBba-35" target="enX2_YqvGUqd8-A0arO4-1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="370" y="980" />
+              <mxPoint x="370" y="1070" />
               <mxPoint x="370" y="675" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="6OPiGLtKQRhlAA7yIBba-35" value="disponibilidad" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="192.5" y="960" width="105" height="40" as="geometry" />
+          <mxGeometry x="192.5" y="1050" width="105" height="40" as="geometry" />
         </mxCell>
         <mxCell id="6OPiGLtKQRhlAA7yIBba-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="6OPiGLtKQRhlAA7yIBba-37" target="enX2_YqvGUqd8-A0arO4-1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="390" y="1030" />
+              <mxPoint x="390" y="1120" />
               <mxPoint x="390" y="660" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="6OPiGLtKQRhlAA7yIBba-37" value="fecha_registro" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="192.5" y="1010" width="105" height="40" as="geometry" />
+          <mxGeometry x="192.5" y="1100" width="105" height="40" as="geometry" />
         </mxCell>
         <mxCell id="6OPiGLtKQRhlAA7yIBba-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="6OPiGLtKQRhlAA7yIBba-39" target="enX2_YqvGUqd8-A0arO4-7">
           <mxGeometry relative="1" as="geometry" />
