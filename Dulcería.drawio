@@ -293,6 +293,24 @@
         <mxCell id="6OPiGLtKQRhlAA7yIBba-43" value="rfc" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="440" y="910" width="105" height="40" as="geometry" />
         </mxCell>
+        <mxCell id="6OPiGLtKQRhlAA7yIBba-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="6OPiGLtKQRhlAA7yIBba-45" target="enX2_YqvGUqd8-A0arO4-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="470" y="460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6OPiGLtKQRhlAA7yIBba-45" value="id_venta" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="350" y="440" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="6OPiGLtKQRhlAA7yIBba-47" value="fecha_venta" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="305" y="480" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="6OPiGLtKQRhlAA7yIBba-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6OPiGLtKQRhlAA7yIBba-47">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="440" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
