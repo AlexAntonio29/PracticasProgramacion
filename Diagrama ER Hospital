@@ -59,8 +59,8 @@
         <mxCell id="Df9b18OpvAKbcSCm4FNE-4" value="Obtiene" style="rhombus;whiteSpace=wrap;html=1;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;strokeWidth=1;spacing=6;spacingTop=-4;labelBackgroundColor=none;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="480" y="310" width="100" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="Df9b18OpvAKbcSCm4FNE-8" value="&lt;font style=&quot;font-size: 19px;&quot;&gt;Diagrama ER Hospital&lt;/font&gt;" style="text;strokeColor=#d6b656;align=center;fillColor=#fff2cc;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;fontColor=#FF8000;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="260" y="40" width="270" height="30" as="geometry" />
+        <mxCell id="Df9b18OpvAKbcSCm4FNE-8" value="&lt;font&gt;Diagrama ER Hospital&lt;/font&gt;" style="text;strokeColor=#d6b656;align=center;fillColor=#fff2cc;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;fontColor=#FF8000;fontSize=33;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="260" y="40" width="450" height="60" as="geometry" />
         </mxCell>
         <mxCell id="Df9b18OpvAKbcSCm4FNE-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;strokeColor=#E07A5F;fontColor=#393C56;fillColor=#F2CC8F;endArrow=none;endFill=0;curved=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="Df9b18OpvAKbcSCm4FNE-9" target="WIyWlLk6GJQsqaUBKTNV-3">
           <mxGeometry relative="1" as="geometry" />
