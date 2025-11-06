@@ -121,7 +121,7 @@
             <mxPoint x="160" y="270" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="CmtE2bdToEHuX8k079bN-0" value="&lt;font style=&quot;color: rgb(255, 254, 254); font-size: 33px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Diagrama de Clase Eco-Game&lt;/b&gt;&lt;/font&gt;" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;rounded=0;labelBackgroundColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="CmtE2bdToEHuX8k079bN-0" value="&lt;font style=&quot;font-size: 33px; color: rgb(0, 0, 0);&quot;&gt;&lt;b style=&quot;&quot;&gt;Diagrama de Clase Eco-Game&lt;/b&gt;&lt;/font&gt;" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;rounded=0;labelBackgroundColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="-390" y="-1100" width="770" height="90" as="geometry" />
         </mxCell>
         <mxCell id="CmtE2bdToEHuX8k079bN-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;endArrow=block;endFill=0;endSize=13;labelBackgroundColor=none;fontColor=default;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="CmtE2bdToEHuX8k079bN-26" target="zkfFHV4jXpPFQw0GAbJ--0">
