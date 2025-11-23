@@ -115,7 +115,7 @@
         <mxCell id="IoK2Joa-lHyJm4YsxA-N-41" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="persona" vertex="1">
           <mxGeometry height="210" width="140" x="160" y="510" as="geometry" />
         </mxCell>
-        <mxCell id="IoK2Joa-lHyJm4YsxA-N-42" parent="IoK2Joa-lHyJm4YsxA-N-41" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="id_persona" vertex="1">
+        <mxCell id="IoK2Joa-lHyJm4YsxA-N-42" parent="IoK2Joa-lHyJm4YsxA-N-41" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="id_persona PK" vertex="1">
           <mxGeometry height="30" width="140" y="30" as="geometry" />
         </mxCell>
         <mxCell id="IoK2Joa-lHyJm4YsxA-N-43" parent="IoK2Joa-lHyJm4YsxA-N-41" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="nombre" vertex="1">
